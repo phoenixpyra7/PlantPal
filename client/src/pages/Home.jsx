@@ -19,7 +19,8 @@ function Home() {
 
   return (
     <>
-      <div>Home</div>
+      {/* <div>Home</div> */}
+      <h1>PlantPal</h1>
       <UserList users={users} />
     </>
   );

@@ -2,11 +2,13 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App.jsx';
-import Error from './pages/Signup.jsx';
+import Error from './pages/Signup.jsx'; // Should I change this????
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup.jsx';
+import Search from './pages/Search.jsx';
+import MyCollection from './pages/MyCollection.jsx';
 
 const router = createBrowserRouter([
   {
@@ -17,7 +19,8 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />
-      }, {
+      }, 
+      {
         path: '/login',
         element: <Login />
       },
@@ -28,6 +31,14 @@ const router = createBrowserRouter([
       {
         path: '/users/:id',
         element: <Profile />
+      },
+      {
+        path: '/search',
+        element: <Search />
+      },
+      {
+        path: '/mycollection',
+        element: <MyCollection />
       },
       {
         path: '/me',

@@ -16,6 +16,12 @@ function Navbar() {
         <Link to="/me">
           {Auth.getProfile().data.username}&lsquo;s profile
         </Link>
+        <Link to="/mycollection">
+          My Collection
+        </Link>
+        <Link to="/search">
+          Search
+        </Link>
         <button onClick={logout}>
           Logout
         </button>
@@ -34,6 +40,12 @@ function Navbar() {
       <Link to="/signup">
         Signup
       </Link>
+      <Link to="/mycollection">
+          My Collection
+        </Link>
+        <Link to="/search">
+          Search
+        </Link>
     </>
   );
 }
