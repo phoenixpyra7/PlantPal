@@ -1,8 +1,10 @@
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+import './index.css';
+
 import App from './App.jsx';
-import Error from './pages/Signup.jsx'; // Should I change this????
+import Error from './pages/Error'; // Should I change this????
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
