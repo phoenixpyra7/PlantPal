@@ -7,7 +7,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function NavDemo() {
+export default function NavBerger() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (

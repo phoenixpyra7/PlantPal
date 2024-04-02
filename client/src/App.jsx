@@ -7,7 +7,7 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-import NavDemo from './components/NavDemo';
+import NavBerger from './components/NavBerger';
 import Navbar from './components/Navbar';
 
 // Construct our main GraphQL API endpoint
@@ -37,7 +37,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <NavDemo />
+      <NavBerger />
       <Navbar />
       <Outlet />
     </ApolloProvider>
