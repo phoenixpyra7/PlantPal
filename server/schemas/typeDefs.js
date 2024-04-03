@@ -4,13 +4,41 @@ const typeDefs = `#graphql
     username: String
     email: String
     password: String
+    plantCount: Int
+    savedPlants: [Plant]
+    savedPlantsIds: [ID]
   }
+
+  type Plant {
+    plantId: String!
+    commonName: String!
+    scientificName: String
+    sunlight: String
+    directOrIndirect: Boolean
+    water: String
+    annualOrPerennials: Boolean
+    blooms: [String]
+    flowers: Boolean
+    deciduous: Boolean
+}
 
   type Auth {
     token: ID!
     user: User
   }
 
+  input PlantInput {
+   commonName: String!
+   scientificName: String
+   sunlight: String
+   directOrIndirect: Boolean
+   water: String
+   annualOrPerennials: Boolean
+   blooms: [String]
+   flowers: Boolean
+   deciduous: Boolean
+   }
+   
   type Query {
     users: [User]
     user(id: ID!): User
