@@ -40,8 +40,33 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
-    }
+    },
+
+    //Confirm this is where this should go*****
+    savePlant: async (parent, { plantData }, context) => {
+      if (context.user) {
+        const updatedUser = await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { savedPlants: plantData } },
+          { new: true, runValidators: true }
+        );
+        return updatedUser;
+      }
+      throw AuthenticationError;
+    },
+    removePlant: async (parent, { plantId }, context) => {
+      if (context.user) {
+        const updatedUser = await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { savedPlants: { plantId: plantId } } },
+          { new: true }
+        );
+        return updatedUser;
+      }
+      throw AuthenticationError;
+
   }
+  },
 };
 
 module.exports = resolvers;

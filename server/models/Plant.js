@@ -1,20 +1,19 @@
-const { Schema } = require('mongoose');
+const { Schema } = require("mongoose");
 
-// This is a subdocument schema, it won't become its own model but we'll use it as the schema for the User's `savedBooks` array in User.js
-const bookSchema = new Schema({
-  commonName: { 
-   type: String, 
-   required: true,
-},
- scientificName: { 
-   type: String, 
-},
+// This is a subdocument schema, it won't become its own model but we'll use it as the schema for the User's `savedPlants` array in User.js
+const plantSchema = new Schema({
+  commonName: {
+    type: String,
+    required: true,
+  },
+  scientificName: {
+    type: String,
+  },
   sunlight: {
     type: String,
   },
   directOrIndirect: {
     type: Boolean,
-
   },
   water: {
     type: String,
@@ -22,15 +21,15 @@ const bookSchema = new Schema({
   annualOrPerennial: {
     type: Boolean,
   },
- blooms: {
+  blooms: {
     type: string,
   },
-flowers: {
-Type: Boolean,
+  flowers: {
+    Type: Boolean,
   },
-deciduous: {
-Type: Boolean,
+  deciduous: {
+    Type: Boolean,
   },
 });
 
-module.exports = bookSchema;
+module.exports = plantSchema;
