@@ -4,18 +4,31 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 // import { Link } from 'react-router-dom';
 // import Auth from '../utils/auth';
 
-const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
-]
+let navigation = [{ name: "Home", href: "./", current: true }];
+
+if (Auth.loggedIn()) {
+  navigation = navigation.concat([
+    { name: "Home", href: "./", current: false }, //was Dashboard
+    { name: "My Collection", href: "./MyCollection", current: false },
+    { name: "Logout", onClick: Auth.logout, current: false },
+  ]);
+}
+
+if (!Auth.loggedIn()) {
+  navigation = navigation.concat([
+    { name: "Log In ", href: "./login", current: false },
+    { name: "Sign Up ", href: "./signup", current: false },
+  ]);
+}
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Navberger() {
+
+
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -79,7 +92,7 @@ export default function Example() {
                       <img
                         className="h-8 w-8 rounded-full"
                         src= "./src/images/leaf1.png"
-                        alt=""
+                        alt="two leafs touching, light green and dark green"
                       />
                     </Menu.Button>
                   </div>
