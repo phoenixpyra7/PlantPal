@@ -48,6 +48,8 @@ const typeDefs = `#graphql
   type Mutation {
     addUser(email:String!, username:String!, password:String!): Auth
     login(email:String!, password:String!): Auth
+    savePlant(plant: PlantInput!): User
+    removePlant(plantId: String!): User
   }
 `;
 

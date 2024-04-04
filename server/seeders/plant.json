@@ -1,0 +1,168 @@
+[
+    {
+      "commonName": "Aloe vera",
+      "scientificName": "Aloe vera",
+      "sunlight": "Full",
+      "directOrIndirect": "Indirect",
+      "water": "1",
+      "annualOrPerennial": "Perennial",
+      "blooms": ["Summer"],
+      "flowers": true,
+      "deciduous": false
+    },
+    {
+      "commonName": "At Last Roses",
+      "scientificName": "Rosa 'At Last'",
+      "sunlight": "Full",
+      "directOrIndirect": "Direct",
+      "water": "3",
+      "annualOrPerennial": "Perennial",
+      "blooms": ["Summer"],
+      "flowers": false,
+      "deciduous": true
+    },
+    {
+      "commonName": "Christmas Cactus",
+      "scientificName": "Zygocactus truncatus",
+      "sunlight": "Partial",
+      "directOrIndirect": "Indirect",
+      "water": "2",
+      "annualOrPerennial": "Perennial",
+      "blooms": ["Winter"],
+      "flowers": true,
+      "deciduous": false
+    },
+    {
+      "commonName": "Gardenia",
+      "scientificName": "Gardenia jasminoides",
+      "sunlight": "Full",
+      "directOrIndirect": "Indirect",
+      "water": "2",
+      "annualOrPerennial": "Perennial",
+      "blooms": ["Spring", "Summer"],
+      "flowers": true,
+      "deciduous": false
+    },
+    {
+      "commonName": "Lucky Bamboo",
+      "scientificName": "Dracaena sanderiana",
+      "sunlight": "Full",
+      "directOrIndirect": "Indirect",
+      "water": "2",
+      "annualOrPerennial": "Perennial",
+      "blooms": [],
+      "flowers": false,
+      "deciduous": false
+    },
+    {
+      "commonName": "Majesty Palm",
+      "scientificName": "Ravenea rivularis",
+      "sunlight": "Full to Partial",
+      "directOrIndirect": "Indirect",
+      "water": "2",
+      "annualOrPerennial": "Perennial",
+      "blooms": [],
+      "flowers": false,
+      "deciduous": false
+    },
+    {
+      "commonName": "Money Tree",
+      "scientificName": "Pachira aquatica",
+      "sunlight": "Partial",
+      "directOrIndirect": "Indirect",
+      "water": "1",
+      "annualOrPerennial": "Perennial",
+      "blooms": [],
+      "flowers": false,
+      "deciduous": false
+    },
+    {
+      "commonName": "Peace Lily",
+      "scientificName": "Spathiphyllum wallisii",
+      "sunlight": "Partial",
+      "directOrIndirect": "Indirect",
+      "water": "2",
+      "annualOrPerennial": "Perennial",
+      "blooms":["Spring"],
+      "flowers": false,
+      "deciduous": false
+    },
+    {
+      "commonName": "Split-leaf Philodendron",
+      "scientificName": "Monstera deliciosa",
+      "sunlight": "Full",
+      "directOrIndirect": "Indirect",
+      "water": "1",
+      "annualOrPerennial": "Perennial",
+      "blooms":[],
+      "flowers": false,
+      "deciduous": false
+    },
+    {
+      "commonName": "Purple Salvia",
+      "scientificName": "Salvia nemerosa",
+      "sunlight": "Full",
+      "directOrIndirect": "Direct",
+      "water": "2",
+      "annualOrPerennial": "Perennial",
+      "blooms":["Spring", "Summer", "Fall"],
+      "flowers": false,
+      "deciduous": false
+    },
+    {
+      "commonName": "Moth Orchid",
+      "scientificName": "Phalaenopsis spp.",
+      "sunlight": "Partial",
+      "directOrIndirect": "Indirect",
+      "water": "1",
+      "annualOrPerennial": "Perennial",
+      "blooms":[],
+      "flowers": true,
+      "deciduous": true
+    },
+    {
+      "commonName": "Silver Bay",
+      "scientificName": "Aglaonema 'Silver Bay'",
+      "sunlight": "Partial",
+      "directOrIndirect": "Indirect",
+      "water": "2",
+      "annualOrPerennial": "Perennial",
+      "blooms":[],
+      "flowers": false,
+      "deciduous": false
+    },
+    {
+      "commonName": "Spider Plant",
+      "scientificName": "Chlorophytum comosum",
+      "sunlight": "Partial",
+      "directOrIndirect": "Indirect",
+      "water": "1",
+      "annualOrPerennial": "Perennial",
+      "blooms": [],
+      "flowers": false,
+      "deciduous": false
+    },
+    {
+      "commonName": "Venus Fly Trap",
+      "scientificName": "Dionaea muscipula",
+      "sunlight": "Full",
+      "directOrIndirect": "Direct",
+      "water": "3",
+      "annualOrPerennial": "Perennial",
+      "blooms": ["Spring"],
+      "flowers": false,
+      "deciduous": false
+    },
+    {
+      "commonName": "Vinca Minor",
+      "scientificName": "Vinca minor",
+      "sunlight": "Full to Partial",
+      "directOrIndirect": "Direct",
+      "water": "2",
+      "annualOrPerennial": "Perennial",
+      "blooms":["Spring", "Summer"],
+      "flowers": false,
+      "deciduous": false
+    }
+  ]
+  

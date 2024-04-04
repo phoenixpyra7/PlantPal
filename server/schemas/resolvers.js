@@ -1,6 +1,6 @@
-const { GraphQLError } = require('graphql');
-const { User } = require('../models');
-const { signToken } = require('../utils/auth');
+const { GraphQLError } = require("graphql");
+const { User } = require("../models");
+const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
@@ -14,7 +14,7 @@ const resolvers = {
       if (context.user) {
         return User.findOne({ _id: context.user._id });
       }
-      throw new GraphQLError('You need to be logged in!');
+      throw new GraphQLError("You need to be logged in!");
     },
   },
 
@@ -28,13 +28,13 @@ const resolvers = {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw new GraphQLError('No user found with this email address');
+        throw new GraphQLError("No user found with this email address");
       }
 
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw new GraphQLError('Incorrect credentials');
+        throw new GraphQLError("Incorrect credentials");
       }
 
       const token = signToken(user);
@@ -64,8 +64,7 @@ const resolvers = {
         return updatedUser;
       }
       throw AuthenticationError;
-
-  }
+    },
   },
 };
 
