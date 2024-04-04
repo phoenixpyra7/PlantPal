@@ -18,7 +18,7 @@
       "water": "3",
       "annualOrPerennial": "Perennial",
       "blooms": ["Summer"],
-      "flowers": false,
+      "flowers": true,
       "deciduous": true
     },
     {
@@ -73,7 +73,7 @@
       "water": "1",
       "annualOrPerennial": "Perennial",
       "blooms": [],
-      "flowers": false,
+      "flowers": true,
       "deciduous": false
     },
     {
@@ -84,7 +84,7 @@
       "water": "2",
       "annualOrPerennial": "Perennial",
       "blooms":["Spring"],
-      "flowers": false,
+      "flowers": true,
       "deciduous": false
     },
     {
@@ -95,7 +95,7 @@
       "water": "1",
       "annualOrPerennial": "Perennial",
       "blooms":[],
-      "flowers": false,
+      "flowers": true,
       "deciduous": false
     },
     {
@@ -106,7 +106,7 @@
       "water": "2",
       "annualOrPerennial": "Perennial",
       "blooms":["Spring", "Summer", "Fall"],
-      "flowers": false,
+      "flowers": true,
       "deciduous": false
     },
     {
@@ -128,7 +128,7 @@
       "water": "2",
       "annualOrPerennial": "Perennial",
       "blooms":[],
-      "flowers": false,
+      "flowers": true,
       "deciduous": false
     },
     {
@@ -139,7 +139,7 @@
       "water": "1",
       "annualOrPerennial": "Perennial",
       "blooms": [],
-      "flowers": false,
+      "flowers": true,
       "deciduous": false
     },
     {
@@ -150,18 +150,18 @@
       "water": "3",
       "annualOrPerennial": "Perennial",
       "blooms": ["Spring"],
-      "flowers": false,
+      "flowers": true,
       "deciduous": false
     },
     {
-      "commonName": "Vinca Minor",
+      "commonName": "Greater Periwinkle",
       "scientificName": "Vinca minor",
       "sunlight": "Full to Partial",
       "directOrIndirect": "Direct",
       "water": "2",
       "annualOrPerennial": "Perennial",
       "blooms":["Spring", "Summer"],
-      "flowers": false,
+      "flowers": true,
       "deciduous": false
     }
   ]
