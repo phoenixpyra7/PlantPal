@@ -1,21 +1,21 @@
 import { Fragment } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import { Link } from 'react-router-dom'; // Assuming you want to use Link from react-router-dom
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 // import Auth from '../utils/auth';
 
-function Navbar() {
+function Navberger() {
   const logout = (event) => {
     event.preventDefault();
     // Auth.logout();
   };
 
-  const navigation = [ // Assuming you want to use navigation from the template
+  const navigation = [
     { name: "Home", href: "/", current: true },
     { name: "Login", href: "/login", current: false },
+    { name: "About", href: "/about", current: false },
     { name: "Signup", href: "/signup", current: false },
     { name: "My Collection", href: "/mycollection", current: false },
-    { name: "Search", href: "/search", current: false },
   ];
 
   return (
@@ -51,10 +51,10 @@ function Navbar() {
                         to={item.href}
                         className={
                           item.current
-                            ? 'bg-gray-900 text-white'
-                            : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                            ? "bg-gray-900 text-white"
+                            : "text-gray-300 hover:bg-gray-700 hover:text-white"
                         }
-                        aria-current={item.current ? 'page' : undefined}
+                        aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
                       </Link>
@@ -101,8 +101,8 @@ function Navbar() {
                             href="#"
                             className={
                               active
-                                ? 'bg-gray-100'
-                                : 'block px-4 py-2 text-sm text-gray-700'
+                                ? "bg-gray-100"
+                                : "block px-4 py-2 text-sm text-gray-700"
                             }
                           >
                             Your Profile
@@ -115,8 +115,8 @@ function Navbar() {
                             href="#"
                             className={
                               active
-                                ? 'bg-gray-100'
-                                : 'block px-4 py-2 text-sm text-gray-700'
+                                ? "bg-gray-100"
+                                : "block px-4 py-2 text-sm text-gray-700"
                             }
                           >
                             Settings
@@ -129,8 +129,8 @@ function Navbar() {
                             href="#"
                             className={
                               active
-                                ? 'bg-gray-100'
-                                : 'block px-4 py-2 text-sm text-gray-700'
+                                ? "bg-gray-100"
+                                : "block px-4 py-2 text-sm text-gray-700"
                             }
                           >
                             Sign out
@@ -153,10 +153,10 @@ function Navbar() {
                   href={item.href}
                   className={
                     item.current
-                      ? 'bg-gray-900 text-white'
-                      : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                      ? "bg-gray-900 text-white"
+                      : "text-gray-300 hover:bg-gray-700 hover:text-white"
                   }
-                  aria-current={item.current ? 'page' : undefined}
+                  aria-current={item.current ? "page" : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
@@ -169,4 +169,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Navberger;
