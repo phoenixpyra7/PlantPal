@@ -1,7 +1,12 @@
 import React, { useState } from "react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon, } from "@heroicons/react/24/outline";
 
-import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+import {
+  Dialog,
+  Disclosure,
+  Popover,
+  Transition,
+} from "@headlessui/react";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -21,7 +26,7 @@ export default function NavBerger() {
             <span className="sr-only">Your Company</span>
             <img
               className="h-8 w-auto"
-            //   src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+              //   src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
               alt=""
             />
           </a>
@@ -39,13 +44,16 @@ export default function NavBerger() {
 
         <div className="hidden lg:flex lg:gap-x-12">
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Features
+            Home
           </a>
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Marketplace
+            Sign Up
           </a>
           <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Company
+            My Profile
+          </a>
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+            My Collection
           </a>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -65,7 +73,7 @@ export default function NavBerger() {
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+              <span className="sr-only">PlantPal</span>
               <img
                 className="h-8 w-auto"
                 // src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
