@@ -12,13 +12,13 @@ const Profile = () => {
   const { id } = useParams();
 
   // Get current user
-  // const { loading, data, error } = useQuery(id ? QUERY_USER : QUERY_ME, {
-  //   variables: { id },
-  // });
-
-  const { loading, data, error } = useQuery(QUERY_USER, {
+  const { loading, data, error } = useQuery(id ? QUERY_USER : QUERY_ME, {
     variables: { id },
   });
+
+  // const { loading, data, error } = useQuery(QUERY_USER, {
+  //   variables: { id },
+  // });
 
   // Get a list of all users
   const { usersLoading, data: usersData } = useQuery(QUERY_USERS);
@@ -32,9 +32,9 @@ const Profile = () => {
   if (error) console.log(error);
 
   // redirect to personal profile page if username is yours
-  // if (Auth.loggedIn() && Auth.getProfile().data._id === id) {
-  //   return <Navigate to="/me" replace />;
-  // }
+  if (Auth.loggedIn() && Auth.getProfile().data._id === id) {
+    return <Navigate to="/me" replace />;
+  }
 
   if (loading) {
     return <h4>Loading...</h4>;
@@ -43,8 +43,8 @@ const Profile = () => {
   if (!user?.username) {
     return (
       <h4>
-        You need to be logged in to see this. Use the navigation links above to
-        sign up or log in!
+        You need to be logged in to see this. Use the navigation links to
+        sign up or log in
       </h4>
     );
   }
