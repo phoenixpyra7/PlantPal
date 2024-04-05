@@ -62,15 +62,5 @@ export const UPDATE_PLANT = gql`
     notes: $notes
 
     )
-
-export const REMOVE_PLANT = gql`
-  mutation removePlant($plant: String!) {
-    removePlant(plant: $plant) {
-      _id
-      username
-      plants
-    }
   }
 `;
-
-
