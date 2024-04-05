@@ -2,23 +2,36 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
-// import Auth from '../utils/auth';
+import Auth from '../utils/auth';
 // import Layout from "./Layout";
 
-
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
 function Navberger() {
-  const logout = (event) => {
-    event.preventDefault();
-    // Auth.logout();
-  };
+  // const logout = (event) => {
+  //   event.preventDefault();
+  //   // Auth.logout();
+  // };
+  let navigation = [{ name: "Home", href: "./", current: true }];
+  
+  
+  if (Auth.loggedIn()) {
+    navigation = navigation.concat([
+      { name: "About", href: "/about", current: false },
+      { name: "My Collection", href: "/mycollection", current: false },
+      { name: "Logout", onClick: Auth.logout, current: false },
+    ]);
+  
+  }
+  if (!Auth.loggedIn()) {
+    console.log("not logged in")
+    navigation = navigation.concat([
+      { name: "Login", href: "/login", current: false },
+      { name: "Signup", href: "/signup", current: false },
+    ]);
+  }
 
-  const navigation = [
-    { name: "Home", href: "/", current: true },
-    { name: "Login", href: "/login", current: false },
-    { name: "About", href: "/about", current: false },
-    { name: "Signup", href: "/signup", current: false },
-    { name: "My Collection", href: "/mycollection", current: false },
-  ];
 
   return (
     <Disclosure as="nav" className="bg-gray-800">
