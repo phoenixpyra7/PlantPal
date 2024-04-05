@@ -23,3 +23,23 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_PLANT = gql`
+  mutation addPlant($userId: ID!, $plant: String!) {
+    addPlant(userId: $userId, plant: $plant) {
+      _id
+      username
+      plants
+    }
+  }
+`;
+
+export const REMOVE_PLANT = gql`
+  mutation removePlant($plant: String!) {
+    removePlant(plant: $plant) {
+      _id
+      username
+      plants
+    }
+  }
+`;
