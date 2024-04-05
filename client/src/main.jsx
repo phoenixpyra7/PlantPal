@@ -1,55 +1,55 @@
-import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import './index.css';
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./index.css";
 
 // Pages
-import App from './App.jsx';
-import Error from './pages/Error'; 
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Profile from './pages/Profile';
-import Signup from './pages/Signup.jsx';
-import About from './pages/About.jsx';
-import MyCollection from './pages/MyCollection.jsx';
+import App from "./App.jsx";
+import Error from "./pages/Error";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Profile from "./pages/Profile";
+import Signup from "./pages/Signup.jsx";
+import About from "./pages/About.jsx";
+import MyCollection from "./pages/MyCollection.jsx";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App />,
     errorElement: <Error />,
     children: [
       {
         index: true,
-        element: <Home />
-      }, 
-      {
-        path: '/login',
-        element: <Login />
+        element: <Home />,
       },
       {
-        path: '/signup',
-        element: <Signup />
+        path: "/login",
+        element: <Login />,
       },
       {
-        path: '/users/:id',
-        element: <Profile />
+        path: "/signup",
+        element: <Signup />,
       },
       {
-        path: '/about',
-        element: <About />
+        path: "/users/:id",
+        element: <Profile />,
       },
       {
-        path: '/mycollection',
-        element: <MyCollection />
+        path: "/about",
+        element: <About />,
       },
       {
-        path: '/me',
-        element: <Profile />
+        path: "/mycollection",
+        element: <MyCollection />,
       },
-    ]
-  }
-])
+      {
+        path: "/me",
+        element: <Profile />,
+      },
+    ],
+  },
+]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <RouterProvider router={router} />
-)
+);

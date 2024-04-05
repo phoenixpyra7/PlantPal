@@ -127,12 +127,11 @@ const About = ({}) => {
             src="./src/images/AboutBottom1.png"
             className="relative inline-block h-12 w-12 !rounded-full  border-2 border-white object-cover object-center hover:z-10"
           />
-         
         </div>
         <p className="block font-sans text-base antialiased font-normal leading-relaxed text-right">
-        “To plant a garden is to believe in tomorrow.” 
-        <br></br>
-        -Audrey Hepburn
+          “To plant a garden is to believe in tomorrow.”
+          <br></br>
+          -Audrey Hepburn
         </p>
       </div>
     </div>

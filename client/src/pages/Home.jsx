@@ -15,12 +15,14 @@ function Home() {
   if (loading) {
     return <h2>Loading…</h2>;
   }
-  
 
   return (
     <>
       {/* <div>Home</div> */}
-      <h1>PlantPal</h1>
+
+      <h1 className="block font-sans text-6xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 mb-3 text-center mx-auto">
+        PlantPal
+      </h1>
       <UserList users={users} />
     </>
   );
