@@ -22,13 +22,16 @@ const plantSchema = new Schema({
     type: Boolean,
   },
   blooms: {
-    type: string,
+    type: String,
   },
   flowers: {
     Type: Boolean,
   },
   deciduous: {
     Type: Boolean,
+  },
+  notes: {
+    Type: String,
   },
 });
 

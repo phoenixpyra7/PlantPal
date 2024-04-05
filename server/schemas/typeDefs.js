@@ -20,6 +20,7 @@ const typeDefs = `#graphql
     blooms: [String]
     flowers: Boolean
     deciduous: Boolean
+    notes: String
 }
 
   type Auth {
@@ -50,6 +51,7 @@ const typeDefs = `#graphql
     login(email:String!, password:String!): Auth
     savePlant(plant: PlantInput!): User
     removePlant(plantId: String!): User
+    updatePlant(plantId: String!, plant: PlantInput!): User
   }
 `;
 
