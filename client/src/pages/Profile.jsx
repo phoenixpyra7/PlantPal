@@ -32,6 +32,7 @@ const Profile = () => {
   if (error) console.log(error);
 
   // redirect to personal profile page if username is yours
+  // Might have this re-direct go to collection, may change log in redirecton the
   if (Auth.loggedIn() && Auth.getProfile().data._id === id) {
     return <Navigate to="/me" replace />;
   }

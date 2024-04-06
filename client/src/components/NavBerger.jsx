@@ -20,13 +20,14 @@ function Navberger() {
     navigation = navigation.concat([
       { name: "About", href: "/about", current: false },
       { name: "My Collection", href: "/mycollection", current: false },
-      { name: "Logout", onClick: Auth.logout, current: false },
+      { name: "Logout", onClick: Auth.logout,  href: "/login", current: false },
     ]);
   
   }
   if (!Auth.loggedIn()) {
     console.log("not logged in")
     navigation = navigation.concat([
+      { name: "About", href: "/about", current: false },
       { name: "Login", href: "/login", current: false },
       { name: "Signup", href: "/signup", current: false },
     ]);
