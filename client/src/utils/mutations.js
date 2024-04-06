@@ -34,33 +34,12 @@ export const ADD_PLANT = gql`
   }
 `;
 
-export const UPDATE_PLANT = gql`
-  mutation updatePlant(
-    $plantId: ID!
-    $commonName: String!
-    $scientificName: String!
-    $sunlight: String!
-    $directOrIndirect: Boolean!
-    $water: String!
-    $annualOrPerenial: Boolean!
-    $blooms: String!
-    $flowers: Boolean!
-    $deciduous: Boolean!
-    $notes: String
-  ) {
-    updatePlant(
-    plantId: $plantId
-    commonNmae: $commonName
-    scientificName: $scientificName
-    sunlight: $sunlight
-    directOrIndirect: $directOrIndirect
-    water:  $water
-    annualOrPerenial: $annualOrPerenial
-    blooms: $blooms
-    flowers: $flowers
-    deciduous: $deciduous
-    notes: $notes
-
-    )
+export const REMOVE_PLANT = gql`
+  mutation removePlant($userId: ID!, $plant: String!) {
+    removePlant(userId: $userId, plant: $plant) {
+      _id
+      username
+      plants
+    }
   }
 `;
