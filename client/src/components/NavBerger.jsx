@@ -13,7 +13,7 @@ function Navberger() {
   //   event.preventDefault();
   //   // Auth.logout();
   // };
-  let navigation = [{ name: "Home", href: "./", current: true }];
+  let navigation = [{ name: "Home", href: "./", current: false }];
   
   
   if (Auth.loggedIn()) {
