@@ -22,6 +22,68 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
+const MyCollection = ({}) => {
+
+  // state for all of the form data
+  // When added a new input, added the form state
+  const [formState, setFormState] = useState({ commonName: "",
+    scientificName: "",
+    sunlight: "",
+    directOrIndirect: "",
+    water: "",
+    annualOrPerennials: "",
+    blooms: "",
+    flowers: "",
+    deciduous: "",
+    notes: ""
+});
+  // const [formState, setFormState] = useState({ email: "", password: "" });
+ 
+
+  // on change handler
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
+// on sumbmit
+const handleFormSubmit = async (event) => {
+  event.preventDefault();
+  try {
+    // send the data to graphql server (mutation:)
+  } catch (e) {
+    console.error(e);
+  }
+
+  // TODO: when adding a new input, clear the form for each
+  // Clear form values after successful submission
+  setFormState({
+    commonName: "",
+    scientificName: "",
+    sunlight: "",
+    directOrIndirect: "",
+    water: "",
+    annualOrPerennials: "",
+    blooms: "",
+    flowers: "",
+    deciduous: "",
+    notes: ""
+  });
+  //unable to fix syntax error here******************
+// } catch (e) {
+//   console.error(e);
+}
+};
+
+
+
+
+
+
+// Name this function*******
 export default function Example() {
   const [agreed, setAgreed] = useState(false)
 
@@ -43,18 +105,21 @@ export default function Example() {
       </div>
 
       <div className="mx-auto max-w-2xl text-center">
-       
+
+       {/* Title and description */}
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Let's add your plant</h2>
 
         <p className="mt-2 text-lg leading-8 text-gray-600">
-          This is where you will enter the information you find on the plant tag. (If there is no information for a specific field, you can leave it blank.)
+          This is where you will enter the information you find on the plant tag. (You can leave any field blank except for the plant "common name".)
         </p>
+
+
 
       </div>
       <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           
-          
+          {/* Common Name field */}
           <div>
             <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
               Common Name
@@ -62,15 +127,19 @@ export default function Example() {
             <div className="mt-2.5">
               <input
                 type="text"
-                name="first-name"
-                id="first-name"
-                autoComplete="given-name"
+                name="common-name"
+                id="common-name"
+                // autoComplete="given-name" don't need this
+                // the next 3 broke the page
+                // required
+                // value={formState.commonName}
+                // onChange={handleChange}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
-
-
+          
+        {/* Scientific Name field */}
           <div>
             <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-900">
               Scientific Name
@@ -78,15 +147,19 @@ export default function Example() {
             <div className="mt-2.5">
               <input
                 type="text"
-                name="last-name"
-                id="last-name"
-                autoComplete="family-name"
+                name="scientific-name"
+                id="scientific-name"
+                // autoComplete="family-name"
+                // the next 3 broke the page
+                // required
+                // value={formState.commonName}
+                // onChange={handleChange}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
-
-
+        
+          {/* Sunlight field */}
           <div className="sm:col-span-2">
             <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
               Sunlight
@@ -94,111 +167,120 @@ export default function Example() {
             <div className="mt-2.5">
               <input
                 type="text"
-                name="company"
-                id="company"
-                autoComplete="organization"
+                name="sunlight"
+                id="sunlight"
+                // autoComplete="organization"
+                // the next 3 broke the page
+                // required
+                // value={formState.commonName}
+                // onChange={handleChange}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
-          
 
+          {/* direct or indirect sun field */}
           <div className="sm:col-span-2">
             <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
-              Sunlight
+              Direct or Indirect Sun
+            </label>
+            <div className="mt-2.5">
+              <input
+                type="text"
+                // NOT SURE HOW TO NAME THIS
+                name="company"
+                id="company"
+                // autoComplete="organization"
+                // the next 3 broke the page
+                // required
+                // value={formState.commonName}
+                // onChange={handleChange}
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
+            </div>
+          </div>
+
+            {/* water field */}
+          <div className="sm:col-span-2">
+            <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
+              Water
+            </label>
+            <div className="mt-2.5">
+              <input
+                type="text"
+                name="water"
+                id="water"
+                // autoComplete="organization"
+                // the next 3 broke the page
+                // required
+                // value={formState.commonName}
+                // onChange={handleChange}
+                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
+            </div>
+          </div>
+
+            {/* A/P field */}
+          <div className="sm:col-span-2">
+            <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
+              Annual or Perenial
             </label>
             <div className="mt-2.5">
               <input
                 type="text"
                 name="company"
                 id="company"
-                autoComplete="organization"
+                // autoComplete="organization"
+                // the next 3 broke the page
+                // required
+                // value={formState.commonName}
+                // onChange={handleChange}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
 
-
+          {/* blooms field */}
           <div className="sm:col-span-2">
             <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
-              D/I
+              Blooms
             </label>
             <div className="mt-2.5">
               <input
                 type="text"
                 name="company"
                 id="company"
-                autoComplete="organization"
+                // autoComplete="organization"
+                // the next 3 broke the page
+                // required
+                // value={formState.commonName}
+                // onChange={handleChange}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
 
-
+          {/*Flowers field  */}
           <div className="sm:col-span-2">
             <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
-              WATER
+              Flowers
             </label>
             <div className="mt-2.5">
               <input
                 type="text"
                 name="company"
                 id="company"
-                autoComplete="organization"
+                // autoComplete="organization"
+                // the next 3 broke the page
+                // required
+                // value={formState.commonName}
+                // onChange={handleChange}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
           </div>
 
-
-          <div className="sm:col-span-2">
-            <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
-              A/P
-            </label>
-            <div className="mt-2.5">
-              <input
-                type="text"
-                name="company"
-                id="company"
-                autoComplete="organization"
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
-
-
-          <div className="sm:col-span-2">
-            <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
-              BLOOM
-            </label>
-            <div className="mt-2.5">
-              <input
-                type="text"
-                name="company"
-                id="company"
-                autoComplete="organization"
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
-
-
-          <div className="sm:col-span-2">
-            <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
-              F/NF
-            </label>
-            <div className="mt-2.5">
-              <input
-                type="text"
-                name="company"
-                id="company"
-                autoComplete="organization"
-                className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
-
-
+            {/* Deciduous field */}
           <div className="sm:col-span-2">
             <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
               Deciduous
@@ -208,7 +290,11 @@ export default function Example() {
                 type="text"
                 name="company"
                 id="company"
-                autoComplete="organization"
+                // autoComplete="organization"
+                // the next 3 broke the page
+                // required
+                // value={formState.commonName}
+                // onChange={handleChange}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
@@ -218,6 +304,7 @@ export default function Example() {
           <Switch.Group as="div" className="flex gap-x-4 sm:col-span-2">
             <div className="flex h-6 items-center">
               <Switch
+              // can we change this to true false or yes no?
                 checked={agreed}
                 onChange={setAgreed}
                 className={classNames(
@@ -225,6 +312,7 @@ export default function Example() {
                   'flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
                 )}
               >
+                {/* Not sure if this is still needed */}
                 <span className="sr-only">Agree to policies</span>
                 <span
                   aria-hidden="true"
@@ -235,6 +323,8 @@ export default function Example() {
                 />
               </Switch>
             </div>
+
+                  {/* radio button label */}
             <Switch.Label className="text-sm leading-6 text-gray-600">
               {/* Can the privacy policy link do anything fun for this section? */}
               This plant is Deciduous
