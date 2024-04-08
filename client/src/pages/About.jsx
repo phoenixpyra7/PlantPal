@@ -2,6 +2,14 @@ import React from "react";
 
 const About = ({}) => {
   return (
+// This is for the background image
+    <div
+      className="relative flex max-w-[30rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-md container mx-auto"
+      style={{ backgroundImage: `url(/src/images/background4.png)` }} // Apply background image inline
+    >
+      <div className="p-6">
+
+    {/* Below is the blog card template used to structure the about section */}
 
       <div className="relative flex max-w-[30rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-md container mx-auto">
         <div className="relative m-0 overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
@@ -58,8 +66,7 @@ const About = ({}) => {
                 <li>
                   Direct or Indirect sunlight: Some plants need a lot of
                   indirect sunlight which means it is near a window or a
-                  brightly lit room but not in direct path of the sun. Some
-                  plants can get sunburn ELABORATE HERE****.
+                  brightly lit room but not in direct path of the sun.
                 </li>
               </ul>
             </div>
@@ -107,8 +114,8 @@ const About = ({}) => {
             Blooms/Flowers
           </h5>
           <p className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700">
-            Some plants may bloom during certain seasons or may bloom across
-            multiple seasons. Some plants produce ELABORATE HERE *******.
+            Some plants may bloom during certain seasons or may bloom in
+            multiple seasons.
           </p>
           <div className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700"></div>
           <br></br>
@@ -116,9 +123,9 @@ const About = ({}) => {
             Deciduous
           </h5>
           <p className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700">
-            Some plants go into hybernation or a perios of rest. They may lose
+            Some plants go into hybernation or a period of rest. They may lose
             all of their leaves and appear as though they have died but this is
-            not the case. Plants that ELABORATE HERE *****
+            not the case. Plants that go into hybernation usually need a nice dark place to rest until they are ready to grow again, you may want to look up the specific needs of each plant that is deciduous.
           </p>
         </div>
         <div className="flex items-center justify-between p-6">
@@ -126,7 +133,7 @@ const About = ({}) => {
             <img
               alt="photo of a stem and leaves"
               src="./src/images/AboutBottom1.png"
-              className="relative inline-block h-12 w-12 !rounded-full  border-2 border-white object-cover object-center hover:z-10"
+              className="relative inline-block h-13 w-13 !rounded-full  border-2 border-white object-cover object-center hover:z-10"
             />
           </div>
           <p className="block font-sans text-base antialiased font-normal leading-relaxed text-right">
@@ -136,6 +143,10 @@ const About = ({}) => {
           </p>
         </div>
       </div>
+       {/* End of About card*/}
+
+      </div>
+    </div>
   );
 };
 
