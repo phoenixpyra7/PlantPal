@@ -24,7 +24,7 @@ function Navberger() {
       { name: "MyCollection", href: "/mycollection", current: false },
       { name: "About", href: "/about", current: false },
       { name: "Add Plant", href: "/addplant", current: false },
-      { name: "Logout", onClick: Auth.logout,  href: "/login", current: false },
+      { name: "Logout", onClick: Auth.logout,  current: false },
      
     ]);
   
@@ -77,6 +77,7 @@ function Navberger() {
                             ? "bg-gray-900 text-white mx-1"
                             : "text-gray-300 hover:bg-gray-700 hover:text-white sm:mx-1"
                         }
+                        onClick={() => item.onClick && item.onClick()}
                         aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
