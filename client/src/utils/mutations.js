@@ -25,11 +25,22 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_PLANT = gql`
-  mutation addPlant($userId: ID!, $plant: String!) {
-    addPlant(userId: $userId, plant: $plant) {
+  mutation savePlant($plant: PlantInput!) {
+    savePlant(plant: $plant) {
       _id
-      username
-      plants
+      email
+      savedPlants {
+        plantId
+        commonName
+        scientificName
+        sunlight
+        directOrIndirect
+        water
+        annualOrPerennial
+        blooms
+        flowers
+        notes
+      }
     }
   }
 `;
@@ -39,7 +50,7 @@ export const REMOVE_PLANT = gql`
     removePlant(userId: $userId, plant: $plant) {
       _id
       username
-      plants
+      savedPlants
     }
   }
 `;

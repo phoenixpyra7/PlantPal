@@ -14,12 +14,12 @@ const typeDefs = `#graphql
     commonName: String!
     scientificName: String
     sunlight: String
-    directOrIndirect: Boolean
+    directOrIndirect: String
     water: String
-    annualOrPerennials: Boolean
+    annualOrPerennial: String
     blooms: [String]
-    flowers: Boolean
-    deciduous: Boolean
+    flowers: String
+    deciduous: String
     notes: String
 }
 
@@ -32,12 +32,13 @@ const typeDefs = `#graphql
    commonName: String!
    scientificName: String
    sunlight: String
-   directOrIndirect: Boolean
+   directOrIndirect: String
    water: String
-   annualOrPerennials: Boolean
+   annualOrPerennial: String
    blooms: [String]
-   flowers: Boolean
-   deciduous: Boolean
+   flowers: String
+   deciduous: String
+   notes: String
    }
    
   type Query {
