@@ -23,10 +23,10 @@ function classNames(...classes) {
 }
 
 const AddPlant = ({}) => {
-
   // state for all of the form data
   // When added a new input, added the form state
-  const [formState, setFormState] = useState({ 
+  const [agreed, setAgreed] = useState(false)
+  const [formState, setFormState] = useState({
     commonName: "",
     scientificName: "",
     sunlight: "",
@@ -36,10 +36,9 @@ const AddPlant = ({}) => {
     blooms: "",
     flowers: "",
     deciduous: "",
-    notes: ""
-});
+    notes: "",
+  });
   // const [formState, setFormState] = useState({ email: "", password: "" });
- 
 
   // on change handler
   const handleChange = (event) => {
@@ -50,41 +49,33 @@ const AddPlant = ({}) => {
     });
   };
 
-// on sumbmit
-const handleFormSubmit = async (event) => {
-  event.preventDefault();
-  try {
-    // send the data to graphql server (mutation:)
-  } catch (e) {
-    console.error(e);
-  }
+  // on sumbmit
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      // send the data to graphql server (mutation:)
+    } catch (e) {
+      console.error(e);
+    }
 
-  // When adding a new input, clear the form for each
-  // Clear form values after successful submission
-  setFormState({
-    commonName: "",
-    scientificName: "",
-    sunlight: "",
-    directOrIndirect: "",
-    water: "",
-    annualOrPerennials: "",
-    blooms: "",
-    flowers: "",
-    deciduous: "",
-    notes: ""
-  });
-  //unable to fix syntax error here******************
-// } catch (e) {
-//   console.error(e);
-}
-};
-
-
-
-
-// Cannot use AddPlant as a component, put Example back for now
-export default function Example() {
-  const [agreed, setAgreed] = useState(false)
+    // When adding a new input, clear the form for each
+    // Clear form values after successful submission
+    setFormState({
+      commonName: "",
+      scientificName: "",
+      sunlight: "",
+      directOrIndirect: "",
+      water: "",
+      annualOrPerennials: "",
+      blooms: "",
+      flowers: "",
+      deciduous: "",
+      notes: "",
+    });
+    //unable to fix syntax error here******************
+    // } catch (e) {
+    //   console.error(e);
+  };
 
   return (
     // this controls the container
@@ -120,14 +111,14 @@ export default function Example() {
           
           {/* Common Name field */}
           <div>
-            <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label htmlFor="commonName" className="block text-sm font-semibold leading-6 text-gray-900">
               Common Name
             </label>
             <div className="mt-2.5">
               <input
                 type="text"
-                name="common-name"
-                id="common-name"
+                name="commonName"
+                id="commonName"
                 // autoComplete="given-name" don't need this
                 // the next 3 broke the page
                 // required
@@ -140,14 +131,14 @@ export default function Example() {
           
         {/* Scientific Name field */}
           <div>
-            <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label htmlFor="scientificName" className="block text-sm font-semibold leading-6 text-gray-900">
               Scientific Name
             </label>
             <div className="mt-2.5">
               <input
                 type="text"
-                name="scientific-name"
-                id="scientific-name"
+                name="scientificName"
+                id="scientificName"
                 // autoComplete="family-name"
                 // the next 3 broke the page
                 // required
@@ -160,7 +151,7 @@ export default function Example() {
         
           {/* Sunlight field */}
           <div className="sm:col-span-2">
-            <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label htmlFor="sunlight" className="block text-sm font-semibold leading-6 text-gray-900">
               Sunlight
             </label>
             <div className="mt-2.5">
@@ -180,15 +171,15 @@ export default function Example() {
 
           {/* direct or indirect sun field */}
           <div className="sm:col-span-2">
-            <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label htmlFor="directOrIndirect" className="block text-sm font-semibold leading-6 text-gray-900">
               Direct or Indirect Sun
             </label>
             <div className="mt-2.5">
               <input
                 type="text"
                 // NOT SURE HOW TO NAME THIS
-                name="company"
-                id="company"
+                name="directOrIndirect"
+                id="directOrIndirect"
                 // autoComplete="organization"
                 // the next 3 broke the page
                 // required
@@ -201,7 +192,7 @@ export default function Example() {
 
             {/* water field */}
           <div className="sm:col-span-2">
-            <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label htmlFor="water" className="block text-sm font-semibold leading-6 text-gray-900">
               Water
             </label>
             <div className="mt-2.5">
@@ -221,14 +212,14 @@ export default function Example() {
 
             {/* A/P field */}
           <div className="sm:col-span-2">
-            <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label htmlFor="annualOrPerenial" className="block text-sm font-semibold leading-6 text-gray-900">
               Annual or Perenial
             </label>
             <div className="mt-2.5">
               <input
                 type="text"
-                name="company"
-                id="company"
+                name="annualOrPerenial"
+                id="annualOrPerenial"
                 // autoComplete="organization"
                 // the next 3 broke the page
                 // required
@@ -241,14 +232,14 @@ export default function Example() {
 
           {/* blooms field */}
           <div className="sm:col-span-2">
-            <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label htmlFor="blooms" className="block text-sm font-semibold leading-6 text-gray-900">
               Blooms
             </label>
             <div className="mt-2.5">
               <input
                 type="text"
-                name="company"
-                id="company"
+                name="blooms"
+                id="blooms"
                 // autoComplete="organization"
                 // the next 3 broke the page
                 // required
@@ -261,14 +252,14 @@ export default function Example() {
 
           {/*Flowers field  */}
           <div className="sm:col-span-2">
-            <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label htmlFor="flowers" className="block text-sm font-semibold leading-6 text-gray-900">
               Flowers
             </label>
             <div className="mt-2.5">
               <input
                 type="text"
-                name="company"
-                id="company"
+                name="flowers"
+                id="flowers"
                 // autoComplete="organization"
                 // the next 3 broke the page
                 // required
@@ -281,14 +272,14 @@ export default function Example() {
 
             {/* Deciduous field */}
           <div className="sm:col-span-2">
-            <label htmlFor="company" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label htmlFor="deciduous" className="block text-sm font-semibold leading-6 text-gray-900">
               Deciduous
             </label>
             <div className="mt-2.5">
               <input
                 type="text"
-                name="company"
-                id="company"
+                name="deciduous"
+                id="deciduous"
                 // autoComplete="organization"
                 // the next 3 broke the page
                 // required
@@ -332,13 +323,13 @@ export default function Example() {
 
           {/* This is for any notes the user may want to include */}
           <div className="sm:col-span-2">
-            <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
+            <label htmlFor="notes" className="block text-sm font-semibold leading-6 text-gray-900">
               Notes
             </label>
             <div className="mt-2.5">
               <textarea
-                name="message"
-                id="message"
+                name="notes"
+                id="notes"
                 rows={4}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 defaultValue={''}
@@ -360,5 +351,11 @@ export default function Example() {
       </form>
     </div>
   )
-}
+};
+
+export default AddPlant;
+
+
+// Cannot use AddPlant as a component, put Example back for now
+
 

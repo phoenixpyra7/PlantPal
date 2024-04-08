@@ -41,20 +41,19 @@ const About = ({}) => {
               How much sun exposure a plant needs is often represented by a full
               or partly shaded sun icon. In general, there are three degrees of
               sun tolerance: full sun, partial sun/shade and full shade.
+            </p>
               <div className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700">
-                <ul className="list-disc ml-5">
+                <ul className="list-disc ml-5block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700">
                   <li>
                     Full sun: Usually depicted by a sun icon, full sun means the
                     plant needs at least six hours (but sometimes closer to
                     eight or ten hours) of direct sunlight in a day.
                   </li>
-                  <div className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700"></div>
                   <li>
                     Partial sun/shade: This icon appears as a half-shaded sun.
                     Plants that require partial sun need four to six hours of
                     direct sunlight per day.
                   </li>
-                  <div className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700"></div>
                   <li>
                     Full shade: Plants that need full shade will have a sun icon
                     that is completely shaded in on their plant tags. Full shade
@@ -62,7 +61,6 @@ const About = ({}) => {
                     sunlight or less than three hours of direct sunlight per
                     day.
                   </li>
-                  <div className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700"></div>
                   <li>
                     Direct or Indirect sunlight: Some plants need a lot of
                     indirect sunlight which means it is near a window or a
@@ -70,7 +68,6 @@ const About = ({}) => {
                   </li>
                 </ul>
               </div>
-            </p>
             <div className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700"></div>
             <br></br>
             <h5 className="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 mb-3">
@@ -80,21 +77,20 @@ const About = ({}) => {
               Water requirements are detailed or shown as raindrop icons. A
               plant label may also list the water requirements by saying the
               soil should be “dry/well-drained,” “normal” or “moist.”
-              <div className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700"></div>
-              <ul className="list-disc ml-5">
+              </p>
+              <div className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700 "></div>
+              <ul className="list-disc ml-5 block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700">
                 <li>
                   Dry or well-drained soil: Indicated by one raindrop icon,
                   maintaining dry soil means allowing the soil to dry completely
                   between waterings. Even the soil below the top inch should be
                   dry before watering again.
                 </li>
-                <div className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700"></div>
                 <li>
                   Normal: Often indicated by two raindrops, normal means keeping
                   the soil an inch below the surface moist. Allow the top inch
                   of soil – but no more – to dry out before watering again.
                 </li>
-                <div className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700"></div>
                 <li>
                   Moist: Moist soil or three raindrops means the soil should
                   always stay moist. Water frequently to prevent the soil from
@@ -102,7 +98,6 @@ const About = ({}) => {
                   pools on the surface of the soil.
                 </li>
               </ul>
-            </p>
             <p className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700">
               Tip: Remember that new plants typically require frequent watering
               for the first few months as they establish their root systems.
