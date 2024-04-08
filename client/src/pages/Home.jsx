@@ -1,8 +1,6 @@
-
-
 import { useQuery } from "@apollo/client";
 import { QUERY_USERS } from "../utils/queries";
-import UserList from "../components/UserList";
+
 
 function Home() {
   const { data, loading, error } = useQuery(QUERY_USERS);
