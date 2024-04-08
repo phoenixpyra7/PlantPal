@@ -19,8 +19,8 @@ function Navberger() {
   if (Auth.loggedIn()) {
     navigation = navigation.concat([
       { name: "About", href: "/about", current: false },
+      { name: "Add Plant", href: "/addplant", current: false },
       { name: "My Collection", href: "/mycollection", current: false },
-      { name: "Saved Collection", href: "/savedcollection", current: false },
       { name: "Logout", onClick: Auth.logout,  href: "/login", current: false },
     ]);
   

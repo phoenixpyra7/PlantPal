@@ -6,7 +6,7 @@ import Auth from "../utils/auth";
 import { QUERY_USERS, QUERY_USER, QUERY_ME } from "../utils/queries";
 // Components
 import UserList from "../components/UserList";
-import MyCollection from "./MyCollection";
+import AddPlant from "./AddPlant";
 
 const Profile = () => {
   const { id } = useParams();

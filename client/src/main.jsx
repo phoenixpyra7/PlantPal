@@ -10,8 +10,8 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Signup from "./pages/Signup.jsx";
 import About from "./pages/About.jsx";
-import SavedCollection from "./pages/SavedCollection.jsx";
 import MyCollection from "./pages/MyCollection.jsx";
+import AddPlant from "./pages/AddPlant.jsx";
 
 const router = createBrowserRouter([
   {
@@ -40,12 +40,12 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "/mycollection",
-        element: <MyCollection />,
+        path: "/addplant",
+        element: <AddPlant />,
       },
       {
-        path: "/savedcollection",
-        element: <SavedCollection />,
+        path: "/mycollection",
+        element: <MyCollection />,
       },
       {
         path: "/me",

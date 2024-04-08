@@ -15,8 +15,8 @@ function Home() {
     return <h2>Loading…</h2>;
   }
   
-  // Moved the SavedCollection component definition inside the Home component
-  const SavedCollection = () => {
+  // Moved the MyCollection component definition inside the Home component
+  const MyCollection = () => {
     const containerStyle = {
       position: 'relative',
       backgroundImage: `url('./src/images/background1.png')`,
@@ -29,7 +29,7 @@ function Home() {
   
     const h1Style = {
       position: 'absolute',
-      top: '20%',
+      top: '10%',
       left: '50%',
       transform: 'translate(-50%, -50%)',
       zIndex: '1', // To ensure the h1 appears above the image
@@ -54,10 +54,10 @@ function Home() {
     );
   };
 
-  // Render the SavedCollection component
+  // Render the MyCollection component
   return (
     <div>
-      <SavedCollection />
+      <MyCollection />
       {/* Render other components or content here */}
     </div>
   );
