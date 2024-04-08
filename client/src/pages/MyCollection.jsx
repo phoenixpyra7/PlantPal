@@ -26,7 +26,8 @@ const MyCollection = ({}) => {
 
   // state for all of the form data
   // When added a new input, added the form state
-  const [formState, setFormState] = useState({ commonName: "",
+  const [formState, setFormState] = useState({ 
+    commonName: "",
     scientificName: "",
     sunlight: "",
     directOrIndirect: "",
@@ -58,7 +59,7 @@ const handleFormSubmit = async (event) => {
     console.error(e);
   }
 
-  // TODO: when adding a new input, clear the form for each
+  // When adding a new input, clear the form for each
   // Clear form values after successful submission
   setFormState({
     commonName: "",

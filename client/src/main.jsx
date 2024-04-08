@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Signup from "./pages/Signup.jsx";
 import About from "./pages/About.jsx";
+import SavedCollection from "./pages/SavedCollection.jsx";
 import MyCollection from "./pages/MyCollection.jsx";
 
 const router = createBrowserRouter([
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/mycollection",
         element: <MyCollection />,
+      },
+      {
+        path: "/savedcollection",
+        element: <SavedCollection />,
       },
       {
         path: "/me",
