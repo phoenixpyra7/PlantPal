@@ -5,7 +5,7 @@ import React from "react";
 // export default MyCollection;
 const MyCollection = () => {
   const containerStyle = {
-    backgroundImage: `url('./src/images/background1.png')`,
+    backgroundImage: `url('./src/images/background5.png')`,
     backgroundSize: "cover", // Adjust the size of the background image
     width: '100%',
     height: '100%',
@@ -19,7 +19,7 @@ const MyCollection = () => {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     zIndex: '1', // To ensure the h1 appears above the image
-    color: '#0a2a49', // Color of preference for title
+    color: '#1ecc98', // Color of preference for title
     fontSize: '3rem', // Font size 
     fontWeight: 'bold', // Font weight
     fontFamily: 'sans-serif', // Font family
@@ -27,16 +27,23 @@ const MyCollection = () => {
   };
 
   return (
-    <div style={containerStyle}>
-      <img
-        src="./src/images/background1.png"
-        style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-        alt="background image of light pink/white flowers"
-      />
+    <main
+    //  background image
+      style={{
+        backgroundImage: `url(/src/images/background8.png)`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "100vh",
+        opacity: '0.9', 
+      }}
+    >
+
+      <div>
       <h6 style={h6Style}>
           My Collection
         </h6>
     </div>
+    </main>
   );
 };
 

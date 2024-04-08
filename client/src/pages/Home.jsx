@@ -17,19 +17,23 @@ function Home() {
   
   // Moved the MyCollection component definition inside the Home component
   const MyCollection = () => {
+   
     const containerStyle = {
-      position: 'relative',
-      backgroundImage: `url('./src/images/background1.png')`,
-      backgroundSize: "cover", // Size of the background image
-      width: '100%',
-      height: '100%',
-      objectFit: 'contain',
-      opacity: '0.7',
+      // position: 'relative',
+      backgroundImage: `url('./src/images/background2.png')`,
+      // backgroundSize: "cover", 
+      // width: '100%',
+      // height: '100%',
+      // objectFit: 'contain',
+      // opacity: '0.7',
+      backgroundSize: "cover", 
+      backgroundPosition: "center",
+      minHeight: "100vh",
     };
   
     const h1Style = {
       position: 'absolute',
-      top: '10%',
+      top: '20%',
       left: '50%',
       transform: 'translate(-50%, -50%)',
       zIndex: '1', // To ensure the h1 appears above the image
