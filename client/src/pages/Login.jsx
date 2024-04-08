@@ -3,7 +3,10 @@ import { useMutation } from "@apollo/client";
 import { Link } from "react-router-dom";
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
+// Import your background image
+import backgroundImage from "/src/images/background3.png";
 
+// NEED TO GIVE A NAME HERE*************
 export default function Example() {
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error, data }] = useMutation(LOGIN_USER);
@@ -39,10 +42,19 @@ export default function Example() {
 
   return (
     <>
-      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+      <div
+  className="flex min-h-screen w-screen flex-col justify-center px-6 py-12 lg:px-8"
+  style={{
+    backgroundImage: `url(/src/images/background3.png)`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    minHeight: "100vh",
+  }}
+>
+    {/* Page Text */}
+
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-    
-          <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+          <h2 className="mt-15 text-center text-4xl font-bold leading-9 tracking-tight text-slate-100">
             Please sign in to your account
           </h2>
         </div>
@@ -52,7 +64,7 @@ export default function Example() {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 text-slate-100"
               >
                 Email address
               </label>
@@ -74,7 +86,7 @@ export default function Example() {
               <div className="flex items-center justify-between">
                 <label
                   htmlFor="password"
-                  className="block text-sm font-medium leading-6 text-gray-900"
+                  className="block text-sm font-medium leading-6 text-slate-100"
                 >
                   Password
                 </label>
@@ -108,7 +120,7 @@ export default function Example() {
             </div>
           </form>
 
-          <p className="mt-10 text-center text-sm text-gray-500">
+          <p className="mt-10 text-center text-md text-slate-100">
             Don't have an account?{" "}
             <Link
               to="/signup"
