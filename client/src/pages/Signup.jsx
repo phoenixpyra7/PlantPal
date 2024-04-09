@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
-import backgroundImage from "/src/images/background3.png";
 
 const Signup = () => {
   const [formState, setFormState] = useState({
@@ -127,7 +126,7 @@ const Signup = () => {
     <main
     //  background image
       style={{
-        backgroundImage: `url(/src/images/background3.png)`,
+        backgroundImage: `url(/images/background3.png)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         minHeight: "100vh",

@@ -5,7 +5,7 @@ import React from "react";
 // export default MyCollection;
 const MyCollection = () => {
   const containerStyle = {
-    backgroundImage: `url('./src/images/background5.png')`,
+    backgroundImage: `url('/images/background5.png')`,
     backgroundSize: "cover", // Adjust the size of the background image
     width: '100%',
     height: '100%',
@@ -30,7 +30,7 @@ const MyCollection = () => {
     <main
     //  background image
       style={{
-        backgroundImage: `url(/src/images/background8.png)`,
+        backgroundImage: `url(/images/background8.png)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         minHeight: "100vh",

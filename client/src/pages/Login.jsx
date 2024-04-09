@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
 // Import your background image
-import backgroundImage from "/src/images/background3.png";
 
 // NEED TO GIVE A NAME HERE*************
 export default function Example() {
@@ -45,7 +44,7 @@ export default function Example() {
       <div
   className="flex min-h-screen w-screen flex-col justify-center px-6 py-12 lg:px-8"
   style={{
-    backgroundImage: `url(/src/images/background3.png)`,
+    backgroundImage: `url(/images/background3.png)`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     minHeight: "100vh",

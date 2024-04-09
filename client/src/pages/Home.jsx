@@ -19,13 +19,7 @@ function Home() {
   const MyCollection = () => {
    
     const containerStyle = {
-      // position: 'relative',
-      backgroundImage: `url('./src/images/background2.png')`,
-      // backgroundSize: "cover", 
-      // width: '100%',
-      // height: '100%',
-      // objectFit: 'contain',
-      // opacity: '0.7',
+      backgroundImage: `url('/images/background2.png')`,
       backgroundSize: "cover", 
       backgroundPosition: "center",
       minHeight: "100vh",
@@ -46,11 +40,11 @@ function Home() {
 
     return (
       <div style={containerStyle}>
-        <img
-          src="./src/images/background2.png"
+        {/* <img
+          src="/images/background2.png"
           style={{ width: '100%', height: '100%', objectFit: 'contain' }}
           alt="background image of a light green succulent"
-        />
+        /> */}
         <h1 style={h1Style}>
           PlantPal
         </h1>

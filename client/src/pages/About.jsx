@@ -5,7 +5,7 @@ const About = ({}) => {
     // This is for the background image, customized for thi page
     <div
       className="bg-contain flex-col overflow-hidden opacity-80 bg-white bg-clip-border text-gray-700 shadow-md  mx-auto"
-      style={{ backgroundImage: `url(/src/images/background4.png)` }} // Appied the background image inline
+      style={{ backgroundImage: `url(/images/background4.png)` }} // Appied the background image inline
     >
       <div className="p-6">
         {/* Below is the blog card template used to structure the about section */}
@@ -13,7 +13,7 @@ const About = ({}) => {
         <div className="relative flex max-w-[30rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-md container mx-auto">
           <div className="relative m-0 overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
             <img
-              src="./src/images/About2.png"
+              src="/images/About2.png"
               alt="back and front of a plant tag that provides instructions on how to care for the plant"
             />
           </div>
@@ -130,7 +130,7 @@ const About = ({}) => {
             <div className="flex items-center -space-x-3">
               <img
                 alt="photo of a stem and leaves"
-                src="./src/images/AboutBottom1.png"
+                src="/images/AboutBottom1.png"
                 className="relative inline-block h-13 w-13 !rounded-full  border-2 border-white object-cover object-center hover:z-10"
               />
             </div>

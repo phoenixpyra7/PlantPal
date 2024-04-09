@@ -55,7 +55,7 @@ function Navberger() {
                   ) : (
                     <img
                         className="h-8 w-8 rounded-full"
-                        src="./src/images/leaf1.png"
+                        src="/images/leaf1.png"
                         alt="two leafs touching, light green and dark green"
                       />
 
