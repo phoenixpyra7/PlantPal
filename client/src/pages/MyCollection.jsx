@@ -5,12 +5,11 @@ import React from "react";
 // export default MyCollection;
 const MyCollection = () => {
   const containerStyle = {
-    backgroundImage: `url('/images/background5.png')`,
-    backgroundSize: "cover", // Adjust the size of the background image
-    width: '100%',
-    height: '100%',
-    objectFit: 'contain',
-    opacity: '0.9',
+    backgroundImage: `url(/images/background8.png)`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "100vh",
+        opacity: '0.9',
   };
 
   const h6Style = {
@@ -27,8 +26,9 @@ const MyCollection = () => {
   };
 
   return (
-    <main
-    //  background image
+    <div style={containerStyle}>
+   {/* <main
+     background image
       style={{
         backgroundImage: `url(/images/background8.png)`,
         backgroundSize: "cover",
@@ -38,12 +38,12 @@ const MyCollection = () => {
       }}
     >
 
-      <div>
+      <div> */}
       <h6 style={h6Style}>
-          My Collection
+          MyCollection
         </h6>
     </div>
-    </main>
+    // </main>
   );
 };
 

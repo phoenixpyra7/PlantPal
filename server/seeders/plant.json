@@ -2,68 +2,68 @@
     {
       "commonName": "Aloe vera",
       "scientificName": "Aloe vera",
-      "sunlight": "Full",
+      "sunlight": "Full Sun",
       "directOrIndirect": "Indirect",
-      "water": "1",
+      "water": "Dry",
       "annualOrPerennial": "Perennial",
       "blooms": ["Summer"],
-      "flowers": true,
-      "deciduous": false
+      "flowers": "Flowers",
+      "deciduous": "No"
     },
     {
       "commonName": "At Last Roses",
       "scientificName": "Rosa 'At Last'",
-      "sunlight": "Full",
+      "sunlight": "Full Sun",
       "directOrIndirect": "Direct",
-      "water": "3",
+      "water": "Moist",
       "annualOrPerennial": "Perennial",
       "blooms": ["Summer"],
-      "flowers": true,
-      "deciduous": true
+      "flowers": "Flowers",
+      "deciduous": "Deciduous"
     },
     {
       "commonName": "Christmas Cactus",
       "scientificName": "Zygocactus truncatus",
-      "sunlight": "Partial",
+      "sunlight": "Partial Sun",
       "directOrIndirect": "Indirect",
-      "water": "2",
+      "water": "Normal",
       "annualOrPerennial": "Perennial",
       "blooms": ["Winter"],
-      "flowers": true,
-      "deciduous": false
+      "flowers": "Flowers",
+      "deciduous": "No"
     },
     {
       "commonName": "Gardenia",
       "scientificName": "Gardenia jasminoides",
-      "sunlight": "Full",
+      "sunlight": "Full Sun",
       "directOrIndirect": "Indirect",
-      "water": "2",
+      "water": "Normal",
       "annualOrPerennial": "Perennial",
       "blooms": ["Spring", "Summer"],
-      "flowers": true,
-      "deciduous": false
+      "flowers": "Flowers",
+      "deciduous": "No"
     },
     {
       "commonName": "Lucky Bamboo",
       "scientificName": "Dracaena sanderiana",
-      "sunlight": "Full",
+      "sunlight": "Full Sun",
       "directOrIndirect": "Indirect",
-      "water": "2",
+      "water": "Normal",
       "annualOrPerennial": "Perennial",
       "blooms": [],
-      "flowers": false,
-      "deciduous": false
+      "flowers": "No",
+      "deciduous": "No"
     },
     {
       "commonName": "Majesty Palm",
       "scientificName": "Ravenea rivularis",
-      "sunlight": "Full to Partial",
+      "sunlight": "Full Sun to Partial Shade",
       "directOrIndirect": "Indirect",
-      "water": "2",
+      "water": "Normal",
       "annualOrPerennial": "Perennial",
       "blooms": [],
-      "flowers": false,
-      "deciduous": false
+      "flowers": "No",
+      "deciduous": "No"
     },
     {
       "commonName": "Money Tree",
@@ -73,19 +73,19 @@
       "water": "1",
       "annualOrPerennial": "Perennial",
       "blooms": [],
-      "flowers": true,
-      "deciduous": false
+      "flowers": "Flowers",
+      "deciduous": "No"
     },
     {
       "commonName": "Peace Lily",
       "scientificName": "Spathiphyllum wallisii",
       "sunlight": "Partial",
       "directOrIndirect": "Indirect",
-      "water": "2",
+      "water": "Normal",
       "annualOrPerennial": "Perennial",
       "blooms":["Spring"],
-      "flowers": true,
-      "deciduous": false
+      "flowers": "Flowers",
+      "deciduous": "No"
     },
     {
       "commonName": "Split-leaf Philodendron",
@@ -95,19 +95,19 @@
       "water": "1",
       "annualOrPerennial": "Perennial",
       "blooms":[],
-      "flowers": true,
-      "deciduous": false
+      "flowers": "Flowers",
+      "deciduous": "No"
     },
     {
       "commonName": "Purple Salvia",
       "scientificName": "Salvia nemerosa",
       "sunlight": "Full",
       "directOrIndirect": "Direct",
-      "water": "2",
+      "water": "Normal",
       "annualOrPerennial": "Perennial",
       "blooms":["Spring", "Summer", "Fall"],
-      "flowers": true,
-      "deciduous": false
+      "flowers": "Flowers",
+      "deciduous": "No"
     },
     {
       "commonName": "Moth Orchid",
@@ -117,19 +117,19 @@
       "water": "1",
       "annualOrPerennial": "Perennial",
       "blooms":[],
-      "flowers": true,
-      "deciduous": true
+      "flowers": "Flowers",
+      "deciduous": "Deciduous"
     },
     {
       "commonName": "Silver Bay",
       "scientificName": "Aglaonema 'Silver Bay'",
       "sunlight": "Partial",
       "directOrIndirect": "Indirect",
-      "water": "2",
+      "water": "Normal",
       "annualOrPerennial": "Perennial",
       "blooms":[],
-      "flowers": true,
-      "deciduous": false
+      "flowers": "Flowers",
+      "deciduous": "No"
     },
     {
       "commonName": "Spider Plant",
@@ -139,8 +139,8 @@
       "water": "1",
       "annualOrPerennial": "Perennial",
       "blooms": [],
-      "flowers": true,
-      "deciduous": false
+      "flowers": "Flowers",
+      "deciduous": "No"
     },
     {
       "commonName": "Venus Fly Trap",
@@ -150,19 +150,19 @@
       "water": "3",
       "annualOrPerennial": "Perennial",
       "blooms": ["Spring"],
-      "flowers": true,
-      "deciduous": false
+      "flowers": "Flowers",
+      "deciduous": "No"
     },
     {
       "commonName": "Greater Periwinkle",
       "scientificName": "Vinca minor",
       "sunlight": "Full to Partial",
       "directOrIndirect": "Direct",
-      "water": "2",
+      "water": "Normal",
       "annualOrPerennial": "Perennial",
       "blooms":["Spring", "Summer"],
-      "flowers": true,
-      "deciduous": false
+      "flowers": "Flowers",
+      "deciduous": "No"
     }
   ]
   
