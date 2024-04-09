@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useQuery } from "@apollo/client";
 import React from "react";
 import { QUERY_PLANTS } from "../utils/queries";
 
@@ -7,21 +8,19 @@ function MyCollection() {
   const [myCollection, setMyCollection] = useState([]);
 
   const { data, loading, error } = useQuery(QUERY_PLANTS);
+  const users = data?.users || [];
 
   if (error) {
     throw Error(error);
   }
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <h2>Loading…</h2>;
   }
-  
+
  // JSON.parse() is used to convert the stringified JSON object to a JavaScript object
 
-
-
-
-
+//const MyCollection instead?
   const getMyCollection = () => {
     fetch("/api/myCollection")
       .then((res) => res.json())
