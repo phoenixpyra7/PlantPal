@@ -15,7 +15,7 @@ const resolvers = {
       if (context.user) {
         return User.findOne({ _id: context.user._id });
       }
-      throw new GraphQLError("You need to be logged in!");
+      throw new GraphQLError("You need to be logged in!"); 
     },
   },
 

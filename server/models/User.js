@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
+const plantSchema  = require('./Plant');
 
 // schema for the User's model
 const userSchema = new Schema({
@@ -19,7 +20,8 @@ const userSchema = new Schema({
     type: String,
     required: true,
     minlength: 5,
-  }
+  },
+   plants: [plantSchema],
 });
 
 // pre save hook to hash password

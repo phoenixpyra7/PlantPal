@@ -27,19 +27,23 @@ export const QUERY_ME = gql`
       _id
       username
       email
+   plants {
+        plantId
+        commonName
+        scientificName
+        sunlight
+        directOrIndirect
+        water
+        annualOrPerennial
+        blooms
+        flowers
+        deciduous
+        notes
+      }
     }
   }
 `;
 
-export const QUERY_PLANTS = gql`
-  query plants {
-    plants {
-      _id
-      name
-      description
-    }
-  }
-`;
 
 export const QUERY_PLANT = gql`
   query plant($id: ID!) {

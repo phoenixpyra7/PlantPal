@@ -4,9 +4,7 @@ const typeDefs = `#graphql
     username: String
     email: String
     password: String
-    plantCount: Int
-    savedPlants: [Plant]
-    savedPlantsIds: [ID]
+    plants: [Plant]
   }
 
   type Plant {
@@ -45,6 +43,7 @@ const typeDefs = `#graphql
     users: [User]
     user(id: ID!): User
     me: User
+    plants: [Plant]
   }
 
   type Mutation {
