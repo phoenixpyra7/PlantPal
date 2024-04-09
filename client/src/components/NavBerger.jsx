@@ -17,7 +17,7 @@ function Navberger() {
 
   let navigation = [{ name: "Home", href: "./", current: false }];
   
-  
+  // Pages that can be seen when logged in
   if (Auth.loggedIn()) {
     navigation = navigation.concat([
      
@@ -28,6 +28,7 @@ function Navberger() {
      
     ]);
   
+    // Pages that can be seen when logged out
   }
   if (!Auth.loggedIn()) {
     console.log("not logged in")
@@ -46,13 +47,15 @@ function Navberger() {
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-around">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                {/* Mobile menu button icon outline removed*/}
+                {/* Mobile view -menu button icon */}
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white ">
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
+                    // Close icon
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                   ) : (
+                    // Menu icon customized with the leaf icon
                     <img
                         className="h-8 w-8 rounded-full"
                         src="/images/leaf1.png"
@@ -60,12 +63,14 @@ function Navberger() {
                       />
 
                   )}
+                  {/* this is to change the layout of the nav bar when not in mobile view */}
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                 
                 </div>
+
+                {/* This maps thru the nav bar */}
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
@@ -86,7 +91,7 @@ function Navberger() {
                   </div>
                 </div>
               </div>
-              {/* this is to change the layout of the nav bar when open leaf icon */}
+              {/* this is to change the layout of the nav bar when viewing thru the leaf icon in mobile view */}
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
                   type="button"
@@ -122,7 +127,5 @@ function Navberger() {
     </Disclosure>
   );
 }
-
-
 
 export default Navberger;

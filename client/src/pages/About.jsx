@@ -2,14 +2,15 @@ import React from "react";
 
 const About = ({}) => {
   return (
-    // This is for the background image, customized for thi page
+    // This is for the background image, customized for this page
     <div
+    // Appied the background image inline
       className="bg-contain flex-col overflow-hidden opacity-80 bg-white bg-clip-border text-gray-700 shadow-md  mx-auto"
-      style={{ backgroundImage: `url(/images/background4.png)` }} // Appied the background image inline
+      style={{ backgroundImage: `url(/images/background4.png)` }} 
     >
       <div className="p-6">
-        {/* Below is the blog card template used to structure the about section */}
 
+        {/* Below is the blog card template used to structure the about section */}
         <div className="relative flex max-w-[30rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-md container mx-auto">
           <div className="relative m-0 overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
             <img

@@ -12,12 +12,15 @@ function MyCollection() {
     throw Error(error);
   }
 
-  // JSON.parse() is used to convert the stringified JSON object to a JavaScript object
-
-
   if (loading) {
     return <div>Loading...</div>;
   }
+  
+ // JSON.parse() is used to convert the stringified JSON object to a JavaScript object
+
+
+
+
 
   const getMyCollection = () => {
     fetch("/api/myCollection")

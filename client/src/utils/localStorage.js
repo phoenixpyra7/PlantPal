@@ -1,3 +1,6 @@
+
+
+// localStorage for plantpal
 export const getSavedPlantIds = () => {
     const savedPlantIds = localStorage.getItem('saved_plants')
       ? JSON.parse(localStorage.getItem('saved_plants'))

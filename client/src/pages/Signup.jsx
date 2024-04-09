@@ -4,6 +4,7 @@ import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
 
+// signup page
 const Signup = () => {
   const [formState, setFormState] = useState({
     username: "",
@@ -13,6 +14,7 @@ const Signup = () => {
 
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
+  // handle form changes
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -21,21 +23,23 @@ const Signup = () => {
       [name]: value,
     });
   };
-
+// handle form submit
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
+    // use try/catch instead of promises to handle errors
     try {
       const { data } = await addUser({
         variables: { ...formState },
       });
-
+      
       Auth.login(data.addUser.token);
     } catch (e) {
       console.error(e);
     }
   };
 
+  // render form 
   const renderForm = () => {
     if (data) {
       return (
@@ -45,11 +49,12 @@ const Signup = () => {
       );
     }
     return (
-
+        
       <form className="space-y-6" onSubmit={handleFormSubmit}>
         {" "}
         {/* Moved onSubmit to the outer form */}
         <div>
+          {/* label for username */}
             <label htmlFor="username" 
             className="block text-sm font-medium leading-6 text-slate-100">
               Username
@@ -59,6 +64,7 @@ const Signup = () => {
             </div>
           </div>
         <div>
+          {/* label for email */}
           <label
             htmlFor="email"
             className="block text-sm font-medium leading-6 text-slate-100"
@@ -80,6 +86,7 @@ const Signup = () => {
         </div>
         <div>
           <div className="flex items-center justify-between">
+            {/* label for password */}
             <label
               htmlFor="password"
               className="block text-sm font-medium leading-6 text-slate-100"
@@ -101,6 +108,7 @@ const Signup = () => {
           </div>
         </div>
         <div>
+          {/* submit button */}
           <button
             type="submit"
             className="flex w-full justify-center rounded-md bg-green-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"

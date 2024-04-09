@@ -3,10 +3,10 @@ import { useMutation } from "@apollo/client";
 import { Link } from "react-router-dom";
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
-// Import your background image
 
-// NEED TO GIVE A NAME HERE*************
-export default function Example() {
+
+
+export default function Login() {
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
@@ -41,6 +41,7 @@ export default function Example() {
 
   return (
     <>
+    {/* background image */}
       <div
   className="flex min-h-screen w-screen flex-col justify-center px-6 py-12 lg:px-8"
   style={{
@@ -90,9 +91,6 @@ export default function Example() {
                   Password
                 </label>
                 <div className="text-sm">
-                  {/* <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
-                    Forgot password?
-                  </a> */}
                 </div>
               </div>
               <div className="mt-2">
@@ -108,7 +106,7 @@ export default function Example() {
                 />
               </div>
             </div>
-
+            {/* submit button */}
             <div>
               <button
                 type="submit"
@@ -118,7 +116,7 @@ export default function Example() {
               </button>
             </div>
           </form>
-
+          {/* redirect to signup page if no account */}
           <p className="mt-10 text-center text-md text-slate-100">
             Don't have an account?{" "}
             <Link

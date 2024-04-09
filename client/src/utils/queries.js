@@ -1,5 +1,6 @@
 import { gql } from "@apollo/client";
 
+// Queries for plantpal
 export const QUERY_USERS = gql`
   query users {
     users {

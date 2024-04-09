@@ -14,7 +14,6 @@ function Home() {
     return <h2>Loading…</h2>;
   }
 
-  // Moved the MyCollection component definition inside the Home component
   const Home = () => {
     const containerStyle = {
       backgroundImage: `url('/images/background2.png')`,
@@ -43,7 +42,6 @@ function Home() {
     );
   };
 
-  // Render the MyCollection component
   return (
     <div>
       <Home />

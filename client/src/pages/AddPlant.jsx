@@ -15,12 +15,8 @@
 */
 import { useState } from 'react'
 import React from "react";
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Switch } from '@headlessui/react'
 import {useMutation} from '@apollo/client'
 import {ADD_PLANT} from '../utils/mutations'
-
-
 
 
 function classNames(...classes) {
@@ -43,7 +39,7 @@ const AddPlant = ({}) => {
     deciduous: "",
     notes: "",
   });
-  // const [formState, setFormState] = useState({ email: "", password: "" });
+  
 
   const [savePlant, { error }] = useMutation(ADD_PLANT);
 
@@ -72,7 +68,6 @@ const AddPlant = ({}) => {
       console.error(e);
     }
 
-    // When adding a new input, clear the form for each
     // Clear form values after successful submission
     setFormState({
       commonName: "",
@@ -94,13 +89,12 @@ const AddPlant = ({}) => {
     <div className="isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
 
-       {/* Title and description */}
+       {/* Title */}
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Let's add your plant</h2>
-
+        {/* desscription */}
         <p className="mt-2 text-lg leading-8 text-gray-600">
           On this page, you can add the information you find on the plant tag. Only the common name field is required. Once you are finished, head on over to the "MyCollection" page to see your new plant.
         </p>
-
 
 
       </div>
@@ -117,8 +111,6 @@ const AddPlant = ({}) => {
                 type="text"
                 name="commonName"
                 id="commonName"
-                // autoComplete="given-name" don't need this
-                // the next 3 broke the page
                 required
                 value={formState.commonName}
                 onChange={handleChange}
@@ -137,9 +129,6 @@ const AddPlant = ({}) => {
                 type="text"
                 name="scientificName"
                 id="scientificName"
-                // autoComplete="family-name"
-                // the next 3 broke the page
-                // required
                 value={formState.scientificName}
                 onChange={handleChange}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -157,9 +146,6 @@ const AddPlant = ({}) => {
                 type="text"
                 name="sunlight"
                 id="sunlight"
-                // autoComplete="organization"
-                // the next 3 broke the page
-                // required
                 value={formState.sunlight}
                 onChange={handleChange}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -175,12 +161,8 @@ const AddPlant = ({}) => {
             <div className="mt-2.5">
               <input
                 type="text"
-                // NOT SURE HOW TO NAME THIS
                 name="directOrIndirect"
                 id="directOrIndirect"
-                // autoComplete="organization"
-                // the next 3 broke the page
-                // required
                 value={formState.directOrIndirect}
                 onChange={handleChange}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -198,9 +180,6 @@ const AddPlant = ({}) => {
                 type="text"
                 name="water"
                 id="water"
-                // autoComplete="organization"
-                // the next 3 broke the page
-                // required
                 value={formState.water}
                 onChange={handleChange}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -218,9 +197,6 @@ const AddPlant = ({}) => {
                 type="text"
                 name="annualOrPerennial"
                 id="annualOrPerennial"
-                // autoComplete="organization"
-                // the next 3 broke the page
-                // required
                 value={formState.annualOrPerennial}
                 onChange={handleChange}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -238,9 +214,6 @@ const AddPlant = ({}) => {
                 type="text"
                 name="blooms"
                 id="blooms"
-                // autoComplete="organization"
-                // the next 3 broke the page
-                // required
                 value={formState.blooms}
                 onChange={handleChange}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -258,9 +231,6 @@ const AddPlant = ({}) => {
                 type="text"
                 name="flowers"
                 id="flowers"
-                // autoComplete="organization"
-                // the next 3 broke the page
-                // required
                 value={formState.flowers}
                 onChange={handleChange}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -278,9 +248,6 @@ const AddPlant = ({}) => {
                 type="text"
                 name="deciduous"
                 id="deciduous"
-                // autoComplete="organization"
-                // the next 3 broke the page
-                // required
                 value={formState.deciduous}
                 onChange={handleChange}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -312,7 +279,7 @@ const AddPlant = ({}) => {
             type="submit"
             className="block w-full rounded-md bg-green-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
-            Add to my collection
+            Add to MyCollection
           </button>
         </div>
       </form>
@@ -321,8 +288,4 @@ const AddPlant = ({}) => {
 };
 
 export default AddPlant;
-
-
-// Cannot use AddPlant as a component, put Example back for now
-
 
