@@ -16,7 +16,7 @@ function Home() {
   }
   
   // Moved the MyCollection component definition inside the Home component
-  const MyCollection = () => {
+  const Home = () => {
    
     const containerStyle = {
       backgroundImage: `url('/images/background2.png')`,
@@ -40,11 +40,6 @@ function Home() {
 
     return (
       <div style={containerStyle}>
-        {/* <img
-          src="/images/background2.png"
-          style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-          alt="background image of a light green succulent"
-        /> */}
         <h1 style={h1Style}>
           PlantPal
         </h1>
@@ -55,7 +50,7 @@ function Home() {
   // Render the MyCollection component
   return (
     <div>
-      <MyCollection />
+      <Home />
       {/* Render other components or content here */}
     </div>
   );
