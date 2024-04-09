@@ -23,6 +23,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
+
 const AddPlant = ({}) => {
   // state for all of the form data
   // When added a new input, added the form state

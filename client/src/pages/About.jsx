@@ -6,7 +6,7 @@ const About = ({}) => {
     <div
     // Appied the background image inline
       className="bg-contain flex-col overflow-hidden opacity-80 bg-white bg-clip-border text-gray-700 shadow-md  mx-auto"
-      style={{ backgroundImage: `url(/images/background4.png)` }} 
+      style={{ backgroundImage: `url(/images/background2.png)` }} 
     >
       <div className="p-6">
 
