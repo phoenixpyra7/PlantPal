@@ -98,7 +98,7 @@ const AddPlant = ({}) => {
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Let's add your plant</h2>
 
         <p className="mt-2 text-lg leading-8 text-gray-600">
-          This is where you will enter the information you find on the plant tag. 
+          On this page, you can add the information you find on the plant tag. Only the common name field is required. Once you are finished, head on over to the "MyCollections" page to see your new plant.
         </p>
 
 
@@ -150,7 +150,7 @@ const AddPlant = ({}) => {
           {/* Sunlight field */}
           <div className="sm:col-span-2">
             <label htmlFor="sunlight" className="block text-sm font-semibold leading-6 text-gray-900">
-              Sunlight
+              Sunlight: Full Sun, Partial Sun/Shade, or Shade
             </label>
             <div className="mt-2.5">
               <input
@@ -170,7 +170,7 @@ const AddPlant = ({}) => {
           {/* direct or indirect sun field */}
           <div className="sm:col-span-2">
             <label htmlFor="directOrIndirect" className="block text-sm font-semibold leading-6 text-gray-900">
-              Direct or Indirect Sun
+              Direct Sun or Indirect Sun
             </label>
             <div className="mt-2.5">
               <input
@@ -191,7 +191,7 @@ const AddPlant = ({}) => {
             {/* water field */}
           <div className="sm:col-span-2">
             <label htmlFor="water" className="block text-sm font-semibold leading-6 text-gray-900">
-              Water
+              Water: Dry, Normal, Moist
             </label>
             <div className="mt-2.5">
               <input
@@ -231,7 +231,7 @@ const AddPlant = ({}) => {
           {/* blooms field */}
           <div className="sm:col-span-2">
             <label htmlFor="blooms" className="block text-sm font-semibold leading-6 text-gray-900">
-              Blooms
+              Blooms in season(s)
             </label>
             <div className="mt-2.5">
               <input
@@ -251,7 +251,7 @@ const AddPlant = ({}) => {
           {/*Flowers field  */}
           <div className="sm:col-span-2">
             <label htmlFor="flowers" className="block text-sm font-semibold leading-6 text-gray-900">
-              Flowers
+              Flowers or No Flowers
             </label>
             <div className="mt-2.5">
               <input
@@ -271,7 +271,7 @@ const AddPlant = ({}) => {
             {/* Deciduous field */}
           <div className="sm:col-span-2">
             <label htmlFor="deciduous" className="block text-sm font-semibold leading-6 text-gray-900">
-              Deciduous
+              Deciduous (If yes, type Deciduous)
             </label>
             <div className="mt-2.5">
               <input
