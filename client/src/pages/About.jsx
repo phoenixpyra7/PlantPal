@@ -43,7 +43,7 @@ const About = ({}) => {
               sun tolerance: full sun, partial sun/shade and full shade.
             </p>
               <div className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700">
-                <ul className="list-disc ml-5block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700">
+                <ul className="list-disc ml-5 block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700">
                   <li>
                     Full sun: Usually depicted by a sun icon, full sun means the
                     plant needs at least six hours (but sometimes closer to
