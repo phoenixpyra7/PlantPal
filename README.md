@@ -14,7 +14,7 @@
 
 * Audrey Hepburn- Quote 
 
-* Background images: About2png, AboutBottom1.png, background2.png, background3.png, background4.png, background8.png, and AboutBottom1.png icon: https://unsplash.com/
+* Background images: About2.png, AboutBottom1.png, background2.png, background3.png, background4.png, background8.png, and AboutBottom1.png icon: https://unsplash.com/
 
 * Leaf1.png: https://www.pngall.com/
 

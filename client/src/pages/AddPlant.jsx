@@ -94,12 +94,13 @@ const AddPlant = ({}) => {
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Let's add your plant</h2>
         {/* desscription */}
         <p className="mt-2 text-lg leading-8 text-gray-600">
-          On this page, you can add the information you find on the plant tag. Only the common name field is required. Once you are finished, head on over to the "MyCollection" page to see your new plant.
+          On this page, you can add the information you find on the plant tag. You can reference the About page for information on each field. Once you are finished, head on over to the "MyCollection" page to see your new plant.
         </p>
 
 
       </div>
       <form onSubmit={handleFormSubmit} className="mx-auto mt-16 max-w-xl sm:mt-20">
+
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
           
           {/* Common Name field */}
@@ -138,9 +139,11 @@ const AddPlant = ({}) => {
           </div>
         
           {/* Sunlight field */}
-          <div className="sm:col-span-2">
+          {/* <div className="sm:col-span-2"> */}
+          <div>
+              
             <label htmlFor="sunlight" className="block text-sm font-semibold leading-6 text-gray-900">
-              Sunlight: Full Sun, Partial Sun/Shade, or Shade
+              Full Sun, Partial Sun, Full Shade
             </label>
             <div className="mt-2.5">
               <input
@@ -150,12 +153,14 @@ const AddPlant = ({}) => {
                 value={formState.sunlight}
                 onChange={handleChange}
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
+                />
             </div>
+          {/* </div> */}
           </div>
 
           {/* direct or indirect sun field */}
-          <div className="sm:col-span-2">
+          {/* <div className="sm:col-span-2"> */}
+          <div>
             <label htmlFor="directOrIndirect" className="block text-sm font-semibold leading-6 text-gray-900">
               Direct Sun or Indirect Sun
             </label>
@@ -169,10 +174,11 @@ const AddPlant = ({}) => {
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
+          {/* </div> */}
           </div>
-
             {/* water field */}
-          <div className="sm:col-span-2">
+          {/* <div className="sm:col-span-2"> */}
+          <div>
             <label htmlFor="water" className="block text-sm font-semibold leading-6 text-gray-900">
               Water: Dry, Normal, Moist
             </label>
@@ -186,10 +192,11 @@ const AddPlant = ({}) => {
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
+          {/* </div> */}
           </div>
-
             {/* A/P field */}
-          <div className="sm:col-span-2">
+          {/* <div className="sm:col-span-2"> */}
+          <div>
             <label htmlFor="annualOrPerennial" className="block text-sm font-semibold leading-6 text-gray-900">
               Annual or Perennial
             </label>
@@ -203,10 +210,11 @@ const AddPlant = ({}) => {
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
+          {/* </div> */}
           </div>
-
           {/* blooms field */}
-          <div className="sm:col-span-2">
+          {/* <div className="sm:col-span-2"> */}
+          <div>
             <label htmlFor="blooms" className="block text-sm font-semibold leading-6 text-gray-900">
               Blooms in season(s)
             </label>
@@ -220,12 +228,14 @@ const AddPlant = ({}) => {
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
+          {/* </div> */}
           </div>
 
           {/*Flowers field  */}
-          <div className="sm:col-span-2">
+          {/* <div className="sm:col-span-2"> */}
+          <div>
             <label htmlFor="flowers" className="block text-sm font-semibold leading-6 text-gray-900">
-              Flowers or No Flowers
+              Can it grow flowers?
             </label>
             <div className="mt-2.5">
               <input
@@ -237,12 +247,13 @@ const AddPlant = ({}) => {
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
+          {/* </div> */}
           </div>
-
             {/* Deciduous field */}
-          <div className="sm:col-span-2">
+          {/* <div className="sm:col-span-2"> */}
+          <div>
             <label htmlFor="deciduous" className="block text-sm font-semibold leading-6 text-gray-900">
-              Deciduous (If yes, type Deciduous)
+              Deciduous?
             </label>
             <div className="mt-2.5">
               <input
@@ -254,10 +265,12 @@ const AddPlant = ({}) => {
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
               />
             </div>
+          {/* </div> */}
           </div>
 
           {/* This is for any notes the user may want to include */}
-          <div className="sm:col-span-2">
+          {/* <div className="sm:col-span-2"> */}
+          <div>
             <label htmlFor="notes" className="block text-sm font-semibold leading-6 text-gray-900">
               Notes
             </label>
@@ -270,6 +283,7 @@ const AddPlant = ({}) => {
                 defaultValue={''}
               />
             </div>
+          {/* </div> */}
           </div>
           {/* END OF THE FORM FIELDS */}
 
