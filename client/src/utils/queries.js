@@ -29,3 +29,23 @@ export const QUERY_ME = gql`
     }
   }
 `;
+
+export const QUERY_PLANTS = gql`
+  query plants {
+    plants {
+      _id
+      name
+      description
+    }
+  }
+`;
+
+export const QUERY_PLANT = gql`
+  query plant($id: ID!) {
+    plant(id: $id) {
+      _id
+      name
+      description
+    }
+  }
+`;

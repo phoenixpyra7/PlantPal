@@ -1,9 +1,23 @@
 import { useState } from "react";
 import React from "react";
+import { QUERY_PLANTS } from "../utils/queries";
 
 // export default MyCollection;
 function MyCollection() {
   const [myCollection, setMyCollection] = useState([]);
+
+  const { data, loading, error } = useQuery(QUERY_PLANTS);
+
+  if (error) {
+    throw Error(error);
+  }
+
+  // JSON.parse() is used to convert the stringified JSON object to a JavaScript object
+
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   const getMyCollection = () => {
     fetch("/api/myCollection")
