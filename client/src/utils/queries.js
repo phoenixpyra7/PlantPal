@@ -28,7 +28,6 @@ export const QUERY_ME = gql`
       username
       email
    plants {
-        plantId
         commonName
         scientificName
         sunlight

@@ -15,7 +15,7 @@ function MyCollection() {
         if (!loading && !error) { // Ensure data is available and no errors occurred
           setUser(data); // Update myCollection with the fetched data
         }
-        console.log(JSON.stringify(user.me));
+        // console.log(JSON.stringify(user.me));
       } catch (error) {
         console.error(error);
       }
@@ -32,7 +32,6 @@ function MyCollection() {
     return <h2>Error: {error.message}</h2>;
   }
 
- // JSON.parse() is used to convert the stringified JSON object to a JavaScript object
 
 
   const containerStyle = {
@@ -62,7 +61,7 @@ function MyCollection() {
       <div style={containerStyle}>
         <h6 style={h6Style}>MyCollection</h6>
         
-        <p className= "block font-sans text-3xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 mb-3">No plants in collection</p>
+        <p className= "block font-sans text-3xl antialiased font-semibold leading-snug tracking-normal text-white mb-3">No plants in collection</p>
       </div>
     )
   }

@@ -59,10 +59,8 @@ const AddPlant = ({}) => {
     event.preventDefault();
     try {
       const { data } = await savePlant({
-        variables: { plant: { ...formState} },
+        variables: { plants: { ...formState} },
       });
-
-      console.log(data);
 
       // send the data to graphql server (mutation:)
     } catch (e) {

@@ -8,14 +8,13 @@ const typeDefs = `#graphql
   }
 
   type Plant {
-    plantId: String!
     commonName: String!
     scientificName: String
     sunlight: String
     directOrIndirect: String
     water: String
     annualOrPerennial: String
-    blooms: [String]
+    blooms: String
     flowers: String
     deciduous: String
     notes: String
@@ -33,7 +32,7 @@ const typeDefs = `#graphql
    directOrIndirect: String
    water: String
    annualOrPerennial: String
-   blooms: [String]
+   blooms: String
    flowers: String
    deciduous: String
    notes: String
@@ -49,7 +48,7 @@ const typeDefs = `#graphql
   type Mutation {
     addUser(email:String!, username:String!, password:String!): Auth
     login(email:String!, password:String!): Auth
-    savePlant(plant: PlantInput!): User
+    savePlant(plants: PlantInput!): User
     removePlant(plantId: String!): User
     updatePlant(plantId: String!, plant: PlantInput!): User
   }

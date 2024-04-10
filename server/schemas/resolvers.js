@@ -1,6 +1,7 @@
 const { GraphQLError } = require("graphql");
 const { User } = require("../models");
 const { signToken } = require("../utils/auth");
+const plantSchema = require("../models/Plant");
 
 
 const resolvers = {
@@ -44,22 +45,30 @@ const resolvers = {
     },
 
     //Confirm this is where this should go*****
-    savePlant: async (parent, { plantData }, context) => {
+    savePlant: async (parent, { plants }, context) => {
+    try {
       if (context.user) {
         const updatedUser = await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { savedPlants: plantData } },
+          { $addToSet: { plants: plants } },
           { new: true, runValidators: true }
         );
+        console.log(JSON.stringify(plants));
         return updatedUser;
       }
-      throw AuthenticationError;
+      
+    } catch (error) {
+      console.log(error);
+      throw new GraphQLError("Error saving plant");
+         
+    }
+      
     },
     removePlant: async (parent, { plantId }, context) => {
       if (context.user) {
         const updatedUser = await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { savedPlants: { plantId: plantId } } },
+          { $pull: { plants: { plantId: plantId } } },
           { new: true }
         );
         return updatedUser;
