@@ -49,8 +49,7 @@ const typeDefs = `#graphql
     addUser(email:String!, username:String!, password:String!): Auth
     login(email:String!, password:String!): Auth
     savePlant(plants: PlantInput!): User
-    removePlant(plantId: String!): User
-    updatePlant(plantId: String!, plant: PlantInput!): User
+    removePlant(plant: String): User
   }
 `;
 

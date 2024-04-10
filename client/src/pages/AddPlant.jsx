@@ -17,6 +17,7 @@ import { useState } from 'react'
 import React from "react";
 import {useMutation} from '@apollo/client'
 import {ADD_PLANT} from '../utils/mutations'
+import { useNavigate } from 'react-router-dom';
 
 
 function classNames(...classes) {
@@ -43,6 +44,7 @@ const AddPlant = ({}) => {
   
 
   const [savePlant, { error }] = useMutation(ADD_PLANT);
+  const navigate = useNavigate();
 
 
   // on change handler
@@ -63,6 +65,9 @@ const AddPlant = ({}) => {
       });
 
       // send the data to graphql server (mutation:)
+
+      // redirect user profile
+      navigate('/mycollection');
     } catch (e) {
       console.error(e);
     }

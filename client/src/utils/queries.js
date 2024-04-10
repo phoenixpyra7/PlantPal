@@ -7,6 +7,18 @@ export const QUERY_USERS = gql`
       _id
       username
       email
+      plants {
+        commonName
+        scientificName
+        sunlight
+        directOrIndirect
+        water
+        annualOrPerennial
+        blooms
+        flowers
+        deciduous
+        notes
+      }
     }
   }
 `;
@@ -17,6 +29,18 @@ export const QUERY_USER = gql`
       _id
       username
       email
+      plants {
+        commonName
+        scientificName
+        sunlight
+        directOrIndirect
+        water
+        annualOrPerennial
+        blooms
+        flowers
+        deciduous
+        notes
+      }
     }
   }
 `;
@@ -27,7 +51,7 @@ export const QUERY_ME = gql`
       _id
       username
       email
-   plants {
+      plants {
         commonName
         scientificName
         sunlight

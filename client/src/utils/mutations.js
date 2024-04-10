@@ -46,11 +46,20 @@ export const ADD_PLANT = gql`
 `;
 
 export const REMOVE_PLANT = gql`
-  mutation removePlant($userId: ID!, $plant: String!) {
-    removePlant(userId: $userId, plant: $plant) {
+  mutation removePlant($plant: String) {
+    removePlant(plant: $plant) {
       _id
-      username
-      plants
+      plants {
+        commonName
+        scientificName
+        sunlight
+        directOrIndirect
+        water
+        annualOrPerennial
+        blooms
+        flowers
+        notes
+      }
     }
   }
 `;

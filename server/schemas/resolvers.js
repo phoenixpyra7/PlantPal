@@ -64,11 +64,11 @@ const resolvers = {
     }
       
     },
-    removePlant: async (parent, { plantId }, context) => {
+    removePlant: async (parent, { plant }, context) => {
       if (context.user) {
         const updatedUser = await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { plants: { plantId: plantId } } },
+          { $pull: { plants: { commonName: plant } } },
           { new: true }
         );
         return updatedUser;
