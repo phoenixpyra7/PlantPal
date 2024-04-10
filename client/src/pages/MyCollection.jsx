@@ -4,6 +4,7 @@ import React from "react";
 import { QUERY_ME } from "../utils/queries";
 
 
+
 // export default MyCollection;
 function MyCollection() {
   const [user, setUser] = useState({});
@@ -77,13 +78,14 @@ function MyCollection() {
 
             {/* Card title */}
             <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-black">
-              Plant Common Name Here
+              <p>Common Name: {plant.commonName}</p>
             </h5>
 
 
             {/* Card body/text */}
+            {/* for each on the data and return a card */}
             <p className="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
-              All of the plant fields will populate into here
+              {/* All of the plant fields will populate into here */}
             </p>
             <p>Scientific Name: {plant.scientificName}</p>
             <p>Sunlight: {plant.sunlight}</p>
@@ -111,9 +113,7 @@ function MyCollection() {
             
           ))
         }
-            {/* CARD 1 */}
-
-            {/* Card  */}
+           
       </main>
     </div>
   );
@@ -121,17 +121,8 @@ function MyCollection() {
 
 export default MyCollection;
 
-// for each on the data and return a card
-{/* <div className="card">
-  <h5 className="card-title">Common name: {plant.common_name}</h5>
-  <div className="card-body">
-    <p>Scientific name: {plant.scientific_name}</p>
-    <p>Family: {plant.family}</p>
-    <p>Genus: {plant.genus}</p>
-    <p>Species: {plant.species}</p>
-    <p>Subspecies: {plant.subspecies}</p>
-  </div>
-</div> */}
+
+
 
 
 
