@@ -97,7 +97,7 @@ const AddPlant = ({}) => {
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Let's add your plant</h2>
         {/* desscription */}
         <p className="mt-2 text-lg leading-8 text-gray-600">
-          On this page, you can add the information you find on the plant tag. You can reference the About page for information on each field. Once you are finished, head on over to the "MyCollection" page to see your new plant.
+          On this page, you can add the information you find on the plant tag. You can reference the About page for information on each field. Once you are finished, click "Add to MyCollection" and you will be automatically redirected!
         </p>
 
 
