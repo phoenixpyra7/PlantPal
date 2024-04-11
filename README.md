@@ -4,7 +4,7 @@
 * This is an app for the common household and garden enthusiasts. It's purpose is to help those who have difficulty keeping plants or just helping to keep the care instructions for each plant organized. This is a MERN Apollo Server/Client Application using a Mongo database.
 
 ## Screenshots:
-
+![alt text](<Screenshot 2024-04-09 012705.png>) ![alt text](<Screenshot 2024-04-09 012741.png>) ![alt text](<Screenshot 2024-04-09 012805.png>) ![alt text](<Screenshot 2024-04-09 012831.png>) ![alt text](<Screenshot 2024-04-09 013135.png>) ![alt text](<Screenshot 2024-04-09 013646.png>) ![alt text](<Screenshot 2024-04-10 202404.png>)
 
 ## Languages and Technologies Used:
 * HTML, CSS, JavaScript, Node, Express, React, MongoDB, Mongoose, GraphQL, Tailwind CSS, Atlas, Render, Boilerplate code used to setup a MERN Apollo Server/Client Application using a Mongo database.
