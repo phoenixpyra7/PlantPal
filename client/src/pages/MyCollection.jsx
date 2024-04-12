@@ -42,11 +42,11 @@ function MyCollection() {
   return (
     <div className="bg-cover bg-center opacity-90 min-h-screen bg-[url('/images/background8.png')]">
       <h6 className="text-6xl font-bold py-5 text-teal-200 font-sans text-center">MyCollection</h6>
-      <main>
+      <main className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
         {
           user && user.plants && user.plants.map((plant, index) => (
         <div key={`${plant.commonName}-${index}`} className="flex-initial grid grid-cols-1 gap-5 container mx-auto my-5 flex-col mt-0 text-white bg-teal-600 shadow-xl bg-clip-border rounded-xl w-96">
-          <div className="p-6">
+          <div className="p-6 ">
 
 
             {/* Card title */}
@@ -57,7 +57,7 @@ function MyCollection() {
 
             {/* Card body/text */}
             {/* for each on the data and return a card */}
-            <p className="block font-sans text-2xl antialiased">
+            <p className="block font-sans text-2xl antialiased ">
               {/* All of the plant fields will populate into here */}
             </p>
             <p className="text-slate-300"> {plant.scientificName}</p>
