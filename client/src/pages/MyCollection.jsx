@@ -33,7 +33,7 @@ function MyCollection() {
   if (!user.plants) {
     return (
       <div className="bg-cover bg-center opacity-90 min-h-screen bg-[url('/images/background8.png')]">
-        <h6 className="text-3xl font-bold py-5 text-indigo-600 font-sans text-center">MyCollection</h6>
+        <h6 className="text-5xl font-bold py-5 text-indigo-600 font-sans text-center">MyCollection</h6>
         
         <p className= "block font-sans text-5xl antialiased font-semibold leading-snug tracking-normal text-white mb-3">No plants in collection</p>
       </div>
@@ -41,7 +41,7 @@ function MyCollection() {
   }
   return (
     <div className="bg-cover bg-center opacity-90 min-h-screen bg-[url('/images/background8.png')]">
-      <h6 className="text-5xl font-bold py-5 text-indigo-500 font-sans text-center">MyCollection</h6>
+      <h6 className="text-6xl font-bold py-5 text-teal-200 font-sans text-center">MyCollection</h6>
       <main>
         {
           user && user.plants && user.plants.map((plant, index) => (
@@ -50,17 +50,18 @@ function MyCollection() {
 
 
             {/* Card title */}
-            <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-black">
-              <p>Common Name: {plant.commonName}</p>
+            <h5 className="block mb-2 font-sans text-3xl underline-offset-2 font-semibold leading-normal tracking-normal text-black">
+              <p> {plant.commonName}</p>
             </h5>
 
 
             {/* Card body/text */}
             {/* for each on the data and return a card */}
-            <p className="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
+            <p className="block font-sans text-2xl antialiased">
               {/* All of the plant fields will populate into here */}
             </p>
-            <p>Scientific Name: {plant.scientificName}</p>
+            <p className="text-slate-300"> {plant.scientificName}</p>
+            <br></br>
             <p>Sunlight: {plant.sunlight}</p>
            <p>Direct Or Indirect: {plant.directOrIndirect}</p>
            <p>Water: {plant.water}</p>
@@ -76,8 +77,7 @@ function MyCollection() {
           <div className="p-6 pt-0">
             <button
               onClick={() => deletePlant(plant.commonName)}
-              className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:pointer-events-none 
-             shadow-md shadow-black-900/5 text-xs py-3 px-6 rounded-lg bg-fuchsia-950 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
+              className="align-middle select-none font-sans font-semibold text-center uppercase transition-all disabled:opacity-50 disabled:pointer-events-none shadow-md shadow-black-900/5 text-xs py-2 px-2 rounded-lg bg-fuchsia-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow"
               type="button"
             >
               Delete

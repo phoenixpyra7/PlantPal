@@ -28,7 +28,7 @@ function Home() {
       left: "50%",
       transform: "translate(-50%, -50%)",
       zIndex: "1", // To ensure the h1 appears above the image
-      color: "#0a2a49", // Color of preference for title
+      color: "#65075a", // Color of preference for title
       fontSize: "6rem", // Font size
       fontWeight: "bold", // Font weight
       fontFamily: "sans-serif", // Font family
